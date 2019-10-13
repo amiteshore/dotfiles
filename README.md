@@ -1,1 +1,3 @@
 # Dotfiles
+
+`sudo ./bootstrap.sh`

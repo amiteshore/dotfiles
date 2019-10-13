@@ -1,2 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
+bold=$(tput bold);
+cyan=$(tput setaf 14);
+yellow=$(tput setaf 226);
+reset=$(tput sgr0);
+
+PS1="\[${bold}\]";
+PS1+="\[${cyan}\]\w ";
+PS1+="\[${yellow}\]✗ ";
+PS1+="\[${reset}\]";
+export PS1;
