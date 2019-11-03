@@ -5,6 +5,7 @@ cp ./.bash_profile ~/
 cp ./.bash_prompt ~/
 cp ./.bashrc ~/
 cp ./.vimrc ~/
+cp ./.gitconfig ~/
 
 ./apt.sh
 ./install.sh
