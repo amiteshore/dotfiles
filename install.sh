@@ -54,9 +54,12 @@
 
 # Go
 
-# wget -P ~/Downloads https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
-# tar -xvf ~/Downloads/go1.12.7.linux-amd64.tar.gz -C ~/Downloads
-# mv ~/Downloads/go /usr/local
+# wget -P ~/Downloads https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
+# tar -xvf ~/Downloads/go1.13.4.linux-amd64.tar.gz -C ~/usr/local
+
+# Rust 
+
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Docker
 
