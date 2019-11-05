@@ -20,3 +20,5 @@ apt install --yes \
     fonts-firacode \
     gnome-tweak-tool \
     vlc \
+    python3-pip \
+    net-tools \

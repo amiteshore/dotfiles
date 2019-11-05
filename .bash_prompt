@@ -1,12 +1,11 @@
 #!/bin/bash
 
-bold=$(tput bold);
 cyan=$(tput setaf 14);
 yellow=$(tput setaf 226);
 reset=$(tput sgr0);
 
-PS1="\[${bold}\]";
-PS1+="\[${cyan}\]\w ";
-PS1+="\[${yellow}\]✗ ";
-PS1+="\[${reset}\]";
+PS1="\[${cyan}\]\w "; # working directory & whitespace
+PS1+="\[${yellow}\]✗ "; # ✗ & whitespace
+PS1+="\[${reset}\]"; # reset color
+
 export PS1;

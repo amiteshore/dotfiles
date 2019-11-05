@@ -33,3 +33,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export DENO_INSTALL="/home/amit/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
