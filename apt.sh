@@ -4,21 +4,17 @@ apt update
 apt upgrade
 
 apt install --yes \
-    coreutils \
-    binutils \
+		vim \
     git \
-    vim \
     curl \
+		wget \
+		zsh \
     tmux \
-    wget \
     htop \
     tree \
     nginx \
-    nmap \
     gcc \
     clang-format \
     fonts-firacode \
-    gnome-tweak-tool \
-    vlc \
     python3-pip \
     net-tools \
