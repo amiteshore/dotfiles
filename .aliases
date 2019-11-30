@@ -47,3 +47,4 @@ alias pip="pip3"
 
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade --yes"
+alias autoremove="sudo apt autoremove"
