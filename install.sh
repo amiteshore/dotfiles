@@ -8,7 +8,7 @@ dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb
 
 # Node.js
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -55,7 +55,7 @@ java -version
 
 # Go
 
-wget -P ~/Downloads https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
+wget -P ~/Downloads https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
 tar -xvf ~/Downloads/go1.13.4.linux-amd64.tar.gz -C ~/usr/local
 
 # Rust 
