@@ -11,3 +11,6 @@ cp ./.selected_editor ~/
 ./install.sh
 ./code/extensions.sh
 ./gsettings.sh
+
+# Make zsh my default shell
+chsh -s $(which zsh)
