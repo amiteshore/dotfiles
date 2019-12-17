@@ -7,22 +7,23 @@
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.statusBar.visible": true,
-  "workbench.activityBar.visible": true,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {
     "activityBar.border": "#102a44",
-    "sideBar.border": "#102a44"
+    "sideBar.border": "#102a44",
+    "statusBar.border": "#102a44"
   },
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "html.autoClosingTags": false,
+  "material-icon-theme.activeIconPack": "react",
   "liveServer.settings.port": 8000,
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.CustomBrowser": "firefox",
-  "eslint.packageManager": "yarn",
-  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-  "material-icon-theme.activeIconPack": "react"
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format"
 }
