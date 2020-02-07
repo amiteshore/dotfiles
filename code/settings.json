@@ -1,5 +1,8 @@
 {
   "window.zoomLevel": 1.5,
+  "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
+  "window.title": "${dirty}${activeEditorShort}",
   "breadcrumbs.enabled": false,
   "editor.fontSize": 16,
   "editor.fontFamily": "Fira Code",
@@ -7,23 +10,19 @@
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {
-    "activityBar.border": "#102a44",
     "sideBar.border": "#102a44",
-    "statusBar.border": "#102a44"
+    "statusBar.border": "#102a44",
+    "activityBar.border": "#102a44"
   },
   "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
   "html.autoClosingTags": false,
   "material-icon-theme.activeIconPack": "react",
   "liveServer.settings.port": 8000,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "liveServer.settings.CustomBrowser": "firefox",
-  "C_Cpp.clang_format_path": "/usr/bin/clang-format"
+  "liveServer.settings.donotShowInfoMsg": true
 }
