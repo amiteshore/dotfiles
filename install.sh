@@ -23,14 +23,6 @@ export DENO_INSTALL="/home/amit/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 
-# Yarn
-
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-sudo apt update
-sudo apt install yarn --yes
-
-
 # MongoDB
 
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
@@ -45,22 +37,6 @@ sudo add-apt-repository ppa:persepolis/ppa
 sudo apt update
 sudo apt install persepolis --yes
 
-
-# Java JDK 12
-
-sudo add-apt-repository ppa:linuxuprising/java
-sudo apt install oracle-java12-installer --yes
-java -version
-
-
-# Go
-
-wget -P ~/Downloads https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
-sudo tar -xvf ~/Downloads/go1.13.4.linux-amd64.tar.gz -C ~/usr/local
-
-# Rust 
-
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Docker
 
