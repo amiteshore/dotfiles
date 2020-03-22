@@ -22,7 +22,5 @@
   },
   "explorer.confirmDragAndDrop": false,
   "html.autoClosingTags": false,
-  "material-icon-theme.activeIconPack": "react",
-  "liveServer.settings.port": 8000,
-  "liveServer.settings.donotShowInfoMsg": true
+  "material-icon-theme.activeIconPack": "react"
 }
