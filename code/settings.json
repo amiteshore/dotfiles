@@ -13,8 +13,8 @@
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.statusBar.visible": false,
-  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": true,
   "workbench.colorCustomizations": {
     "sideBar.border": "#102a44",
     "statusBar.border": "#102a44",
@@ -22,5 +22,11 @@
   },
   "explorer.confirmDragAndDrop": false,
   "html.autoClosingTags": false,
-  "material-icon-theme.activeIconPack": "react"
+  "material-icon-theme.activeIconPack": "react",
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.singleQuote": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
