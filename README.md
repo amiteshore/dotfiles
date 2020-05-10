@@ -1,5 +1,20 @@
 # Dotfiles
 
-`sudo ./bootstrap.sh`
+My Ubuntu dotfiles.
 
-> Note: Comment out softwares that you don't want to install from ./install.sh before running `sudo ./bootstrap.sh`.
+## Installation
+
+```console
+$ git clone https://github.com/amiteshore/dotfiles.git
+$ cd dotfiles
+$
+$ ./scripts/installer.sh # Installs a bunch of apps
+$ ./scripts/ubuntu.sh # Changes to sensible ubuntu defaults
+$
+$ ./bootstrap.sh # Copies dotfiles (and other config files) to $HOME
+```
+
+## Inspiration
+
+- https://github.com/mathiasbynens/dotfiles
+- https://github.com/cowboy/dotfiles

@@ -1,14 +1,10 @@
 #!/bin/bash
 
-cp ./.aliases ~/
-cp ./.bash_profile ~/
-cp ./.bashrc ~/
-cp ./.vimrc ~/
+# Copy .files to $HOME`
+rsync -avh --no-perms ./copy/ ~/;
 
-./apt.sh
-./install.sh
-./code/extensions.sh
-./gsettings.sh
+# Copy .vim directory to `$HOME`
+rsync -avh --no-perms ./.vim ~/;
 
-# Make zsh my default shell
-chsh -s $(which zsh)
+# Copy sensible vscode configs to vscode's user config direcotry
+rsync -avh ./vscode/ ~/.config/Code/User/;

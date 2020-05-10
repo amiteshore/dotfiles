@@ -1,0 +1,24 @@
+#!/bin/bash
+
+alias ~="cd ~"
+alias h="history"
+alias src="source "
+alias c="code ."
+
+alias dl="cd ~/Downloads"
+alias p="cd ~/projects"
+alias temp="cd ~/projects/temp"
+alias dev="cd ~/projects/dev"
+alias prod="cd ~/projects/prod"
+
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+
+alias v="vim ~/.vimrc"
+alias b="vim ~/.bashrc"
+alias z="vim ~/.zshrc"
+alias omz="vim ~/.oh-my-zsh"
+alias bp="vim ~/.bash_profile"
+alias aliases="vim ~/.aliases"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'

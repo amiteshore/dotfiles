@@ -1,0 +1,29 @@
+{
+    "window.zoomLevel": 1.5,
+    "window.titleBarStyle": "custom",
+    "window.title": "${dirty}${activeEditorShort}",
+    "window.menuBarVisibility": "toggle",
+    "breadcrumbs.enabled": false,
+    "explorer.openEditors.visible": 0,
+    "explorer.confirmDragAndDrop": false,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "editor.cursorStyle": "block",
+    "workbench.startupEditor": "none",
+    "workbench.panel.defaultLocation": "right",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme":"Night Owl",
+    "workbench.colorCustomizations": {
+        "[Night Owl]": {
+            "activityBar.border": "#102a44",
+            "sideBar.border": "#102a44",
+            "statusBar.border": "#102a44",
+            "titleBar.border": "#102a44"
+          }
+    }
+}
