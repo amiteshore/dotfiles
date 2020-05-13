@@ -1,24 +1,47 @@
 #!/bin/bash
 
+# Directory
 alias ~="cd ~"
-alias h="history"
-alias src="source "
-alias c="code ."
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
-alias dl="cd ~/Downloads"
+# Most visited directories
 alias p="cd ~/projects"
 alias temp="cd ~/projects/temp"
 alias dev="cd ~/projects/dev"
 alias prod="cd ~/projects/prod"
+alias dl="cd ~/Downloads"
 
-alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+# List directory contents
+alias ls='ls --color=auto'
+alias lsl='ls -lh --color=auto'
+alias lsa='ls -lah --color=auto'
 
-alias v="vim ~/.vimrc"
+# Config files
+alias al="vim ~/.aliases"
 alias b="vim ~/.bashrc"
+alias bp="vim ~/.bash_profile"
+alias v="vim ~/.vimrc"
+alias gitcfg="vim ~/.gitconfig"
 alias z="vim ~/.zshrc"
 alias omz="vim ~/.oh-my-zsh"
-alias bp="vim ~/.bash_profile"
-alias aliases="vim ~/.aliases"
 
+# Package related
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
+alias autoremove="sudo apt autoremove"
+alias install="sudo apt install"
+alias remove="sudo apt remove"
+
+# Apps
+alias code="code ."
+alias python="python3"
+alias files="nautilus"
+alias chrome="google-chrome"
+alias h="history"
+
+# Misc
+alias c='clear'
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'

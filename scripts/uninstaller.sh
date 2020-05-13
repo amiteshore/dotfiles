@@ -13,4 +13,6 @@ sudo apt-get purge --yes \
   gnome-mines \
   libreoffice* \
   gnome-sudoku \
-  gnome-mahjongg
+  gnome-mahjongg \
+  aisleriot \
+	thunderbird

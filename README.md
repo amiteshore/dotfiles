@@ -18,3 +18,4 @@ $ ./bootstrap.sh # Copies dotfiles (and other config files) to $HOME
 
 - https://github.com/mathiasbynens/dotfiles
 - https://github.com/cowboy/dotfiles
+- https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
