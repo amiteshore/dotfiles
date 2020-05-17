@@ -15,4 +15,5 @@ sudo apt-get purge --yes \
   gnome-sudoku \
   gnome-mahjongg \
   aisleriot \
-	thunderbird
+	thunderbird \
+	firefox
