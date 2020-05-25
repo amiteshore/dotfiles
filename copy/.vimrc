@@ -5,9 +5,11 @@ Plug 'preservim/nerdtree'
 
 call plug#end()
 
+syntax on
+let g:solarized_termcolors=256
+set t_Co=256
 set background=dark
 colorscheme solarized
-let g:solarized_termcolors=256                                                  
 
 " Change mapleader
 let mapleader=","
@@ -19,10 +21,11 @@ map <C-o> :NERDTreeToggle<CR>
 
 set title
 set number
-syntax on
 set tabstop=2
 set ignorecase
 set incsearch
 set laststatus=2
 set ruler
 set showmode
+set noshowmode
+

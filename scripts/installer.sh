@@ -43,6 +43,13 @@ printf "Installing ${GREEN}google-chrome${NC}\n";
 wget -P ~/Downloads https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb
 
+# brave-browser
+echo "";
+printf "Installing ${GREEN}brave-browser{NC}\n";
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt install brave-browser
+
 # vscode
 echo "";
 printf "Installing ${GREEN}vscode${NC}\n";
@@ -66,13 +73,15 @@ printf "Installing ${GREEN}node${NC}\n";
 nvm install --lts
 
 # Install useful global npm packages
+packages=('typescript' 'nodemon' 'gtop' 'tldr');
 echo "";
-for package in typescript gtop nodemon
-do
-  printf "Installing ${GREEN}$package${NC}\n";
-  npm install -g "$package" 
+for pkg in "${packages[@]}"; do
+  printf "Installing ${GREEN}${pkg}${NC}\n";
+  npm install -g "$pkg"; 
   echo "";
-done
+done;
+unset pkg;
+unset packages;
 
 # Deno
 printf "Installing ${GREEN}deno${NC}\n";

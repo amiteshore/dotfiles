@@ -32,12 +32,13 @@ alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias autoremove="sudo apt autoremove"
 alias install="sudo apt install"
-alias remove="sudo apt remove"
+alias purge="sudo apt purge"
 
 # Apps
 alias code="code ."
 alias python="python3"
 alias files="nautilus"
+alias brave="brave-browser"
 alias chrome="google-chrome"
 alias h="history"
 
