@@ -16,6 +16,6 @@ $ ./bootstrap.sh # Copies dotfiles (and other config files) to $HOME
 
 ## Inspiration
 
-- https://github.com/mathiasbynens/dotfiles
-- https://github.com/cowboy/dotfiles
-- https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
+- [mathiasbynens](https://github.com/mathiasbynens/dotfiles)
+- [cowboy](https://github.com/cowboy/dotfiles)
+- [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)

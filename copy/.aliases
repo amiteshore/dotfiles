@@ -1,48 +1,45 @@
 #!/bin/bash
 
 # Directory
-alias ~="cd ~"
+alias ~='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Most visited directories
-alias p="cd ~/projects"
-alias temp="cd ~/projects/temp"
-alias dev="cd ~/projects/dev"
-alias prod="cd ~/projects/prod"
-alias dl="cd ~/Downloads"
+alias p='cd ~/projects'
+alias temp='cd ~/projects/temp'
+alias dev='cd ~/projects/dev'
+alias prod='cd ~/projects/prod'
+alias dtf='cd ~/dotfiles'
 
-# List directory contents
-alias ls='ls --color=auto'
-alias lsl='ls -lh --color=auto'
-alias lsa='ls -lah --color=auto'
+alias dl='cd ~/Downloads'
+alias docs='cd ~/Documents'
+alias pics='cd ~/Pictures'
 
 # Config files
-alias al="vim ~/.aliases"
-alias b="vim ~/.bashrc"
-alias bp="vim ~/.bash_profile"
-alias v="vim ~/.vimrc"
-alias gitcfg="vim ~/.gitconfig"
-alias z="vim ~/.zshrc"
-alias omz="vim ~/.oh-my-zsh"
+alias al='vim ~/.aliases'
+alias b='vim ~/.bashrc'
+alias bp='vim ~/.bash_profile'
+alias v='vim ~/.vimrc'
+alias z='vim ~/.zshrc'
 
 # Package related
-alias update="sudo apt update"
-alias upgrade="sudo apt upgrade"
-alias autoremove="sudo apt autoremove"
-alias install="sudo apt install"
-alias purge="sudo apt purge"
+alias u='sudo apt update && sudo apt upgrade --yes && sudo apt autoremove --yes'
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade --yes'
+alias autoremove='sudo apt autoremove --yes'
+alias install='sudo apt install'
+alias purge='sudo apt purge'
 
 # Apps
-alias code="code ."
-alias python="python3"
-alias files="nautilus"
-alias brave="brave-browser"
-alias chrome="google-chrome"
-alias h="history"
+alias code='code .'
+alias python='python3'
+alias chrome='google-chrome'
+alias files='nautilus'
+alias h='history'
 
 # Misc
 alias c='clear'
-# Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+alias mkdir='mkdir -p'

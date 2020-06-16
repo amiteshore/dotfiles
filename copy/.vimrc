@@ -2,8 +2,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
+Plug 'cjuniet/clang-format.vim'
 
-call plug#end()
+call plug#end()                                                
 
 syntax on
 let g:solarized_termcolors=256
@@ -28,4 +29,3 @@ set laststatus=2
 set ruler
 set showmode
 set noshowmode
-
