@@ -7,13 +7,13 @@ sudo apt-get update
 
 # Uninstall apps that I'm not using
 sudo apt-get purge --yes \
-  remmina \
-  rhythmbox \
+  aisleriot \
+	firefox \
+  libreoffice* \
   gnome-todo \
   gnome-mines \
-  libreoffice* \
   gnome-sudoku \
   gnome-mahjongg \
-  aisleriot \
 	thunderbird \
-	firefox
+  remmina \
+  rhythmbox 

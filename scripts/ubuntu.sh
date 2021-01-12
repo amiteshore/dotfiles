@@ -25,13 +25,6 @@ gsettings set org.gnome.shell.extensions.desktop-icons show-home 'false'
 # Hide trash icon from desktop
 gsettings set org.gnome.shell.extensions.desktop-icons show-trash 'false'
 
-# Download and set macOS Sierra wallpaper
-mkdir -p ~/Pictures/Wallpapers
-wget -P ~/Pictures/Wallpapers https://ismh.s3.amazonaws.com/macos-wallpapers/10-12.jpg
-mv ~/Pictures/Wallpapers/10-12.jpg ~/Pictures/Wallpapers/default.jpg
-gsettings set org.gnome.desktop.background picture-uri 'file:///home/amit/Pictures/Wallpapers/default.jpg'
-gsettings set org.gnome.desktop.background picture-options 'stretched'
-
 ####################################################################
 # Terminal
 ####################################################################

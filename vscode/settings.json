@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 1.5,
+    "window.zoomLevel": 1.8,
     "window.titleBarStyle": "custom",
     "window.title": "${dirty}${activeEditorShort}",
     "window.menuBarVisibility": "toggle",
@@ -11,15 +11,14 @@
     "editor.fontFamily": "'Fira Code'",
     "editor.fontLigatures": true,
     "editor.tabSize": 2,
-    "editor.cursorStyle": "block",
     "workbench.startupEditor": "none",
     "workbench.panel.defaultLocation": "right",
     "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": true,
+    "workbench.statusBar.visible": false,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme":"Night Owl",
+    "workbench.colorTheme": "Night Owl (No Italics)",
     "workbench.colorCustomizations": {
-        "[Night Owl]": {
+        "[Night Owl (No Italics)]": {
             "activityBar.border": "#102a44",
             "sideBar.border": "#102a44",
             "statusBar.border": "#102a44",
