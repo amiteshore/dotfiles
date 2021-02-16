@@ -1,0 +1,32 @@
+#!/usr/bin/zsh
+
+# easy navigation
+alias h="cd ~"
+alias ~="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+
+alias p="cd ~/Projects"
+alias temp="cd ~/Projects/temp"
+alias dev="cd ~/Projects/dev"
+
+alias dl="cd ~/Downloads && ls -lAh"
+alias dt="cd ~/.dotfiles"
+alias t="cd ~/Temporary"
+
+# open/view config files in vim
+alias v="vim ~/.vimrc"
+alias z="vim ~/.zshrc"
+alias i="vim ~/.config/i3/config"
+alias a="vim ~/.config/alacritty/alacritty.yml"
+alias al="vim ~/.aliases"
+
+# miscellaneous
+# open vscode on $PWD
+alias code="code ."
+
+# z=gzip, x=extract, v=verbose, f=archive file
+alias untar='tar -zxvf'
+
+# print each PATH entry on a separate line
+alias path="echo -e ${PATH//:/\\n}"
