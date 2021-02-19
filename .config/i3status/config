@@ -1,0 +1,37 @@
+# i3status configuration file.
+
+general {
+  colors = true
+  interval = 1
+  separator = ""
+}
+
+order += "volume master"
+# order += "ethernet _first_"
+order += "wireless _first_"
+order += "battery all"
+order += "tztime local"
+
+volume master {
+  format = "VOL: %volume"
+  format_muted = "VOL: muted (%volume)"
+  device = "pulse:alsa_output.pci-0000_00_1f.3.analog-stereo"
+}
+
+# ethernet _first_ {
+#   format_up = "E: %ip"
+#   format_down = "E: down"
+# }
+
+wireless _first_ {
+  format_up = "W: %essid"
+  format_down = "W: down"
+}
+
+battery all {
+  format = "%status %percentage"
+}
+
+tztime local {
+  format = "%a %I:%M %p "
+}
