@@ -5,7 +5,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
-" Plug 'cjuniet/clang-format.vim'
 
 call plug#end()
 
@@ -40,7 +39,7 @@ set linebreak
 " =============== Search ===============
 set incsearch                 " Show results as you type
 set hlsearch                  " Highlight search results
-set ignorecase                " Ignore case of searches
+set ignorecase                " Ignore case when searching
 set smartcase
 
 " Lightline
