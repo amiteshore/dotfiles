@@ -1,10 +1,8 @@
-# i3 configuration file.
-
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
-# Font for window titles
-font pango:Noto Sans Mono 8
+# Font for window titles (although I've no windows)
+font pango:Noto Sans 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -155,13 +153,13 @@ bindsym $mod+r mode "resize"
 
 set $mode_system (l)ock, (e)xit, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock --color=141414 && sleep 1, mode "default"     # lock
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"                          # logout
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"                     # reboot
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"          # poweroff
+    bindsym l exec --no-startup-id i3lock --color=141414 && sleep 1, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
-    # bindsym s exec --no-startup-id i3lock && systemctl suspend, mode "default"        # suspend
-    # bindsym h exec --no-startup-id i3lock && systemctl hibernate, mode "default"      # hibernate
+    # bindsym s exec --no-startup-id i3lock && systemctl suspend, mode "default"
+    # bindsym h exec --no-startup-id i3lock && systemctl hibernate, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -172,8 +170,8 @@ bindsym $mod+x mode "$mode_system"
 # status bar
 bar {
     status_command i3status
-	font pango:Ubuntu Regular 11
-	position top
+    font pango:Noto Sans 11
+    position top
     colors {
         background #141414
     }
