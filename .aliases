@@ -1,37 +1,70 @@
 #!/usr/bin/zsh
 
-#
-# ~/.aliases
-#
+# formats for listing files & directories
+alias ls='ls --color=auto'
+alias l='ls -lAh'
+alias la='ls -A'
 
-# Quick navigation
-alias h="cd ~"
-alias ~="cd ~"
-alias ..="cd .."
-alias ...="cd ../.."
+# colorize grep output
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
-alias p="cd ~/Projects"
-alias temp="cd ~/Projects/temp"
-alias dev="cd ~/Projects/dev"
+# confirm before overwriting something
+alias cp='cp -v -i'
+alias mv='mv -v -i'
+alias rm='rm -v -i'
+alias rmrf='rm -rfiv'
 
-alias dl="cd ~/Downloads && ls -lAh"
-alias dt="cd ~/dotfiles"
-alias t="cd ~/Temporary"
+# quickly change directories
+alias ~='cd ~'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias -- -='cd -' # go back to the previous directory
 
-# Open/view config files in vim
-alias v="vim ~/.vimrc"
-alias z="vim ~/.zshrc"
-alias i="vim ~/.config/i3/config"
-alias a="vim ~/.config/alacritty/alacritty.yml"
-alias al="vim ~/.aliases"
+alias p='cd ~/projects'
+alias temp='cd ~/projects/temp'
+alias dev='cd ~/projects/dev'
 
-# Miscellaneous
+alias dl='cd ~/Downloads && ls -lAh'
+alias pics='cd ~/Pictures'
+alias dot='cd ~/dotfiles'
+alias t='cd ~/Temporary'
 
-# Open vscode on $PWD
-alias code="code ."
+# open config files in vim
+alias vrc='vim ~/.vimrc'
+alias zrc='vim ~/.zshrc'
+alias ic='vim ~/.config/i3/config'
+alias ac='vim ~/.config/alacritty/alacritty.yml'
+alias al='vim ~/.aliases'
 
-# z=gzip, x=extract, v=verbose, f=archive file
-alias untar="tar -zxvf"
+# git
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gs='git status'
+alias gp='git push'
+alias gl='git pull'
+alias gc='git commit'
 
-# Print each PATH entry on a separate line
-alias path="echo -e \"${PATH//:/\\n}\""
+# misc
+alias h='history'
+alias v='vim'
+alias vi='vim'
+# alias cat='bat'
+alias code='code .'
+# alias mkdir='mkdir -v -p'
+alias path='echo -e ${PATH//:/\\n}'
+alias :q='exit' # quit like vim :)
+
+# systemctl shortcuts
+# alias sc-status='sudo systemctl status'
+# alias sc-start='sudo systemctl start'
+# alias sc-stop='sudo systemctl stop'
+# alias sc-restart='sudo systemctl restart'
+# alias sc-enable='sudo systemctl enable'
+# alias sc-disable='sudo systemctl disable'
+# alias running='sudo systemctl --type=service --state=running'
+# alias exited='sudo systemctl --type=service --state=exited'
+# alias services='sudo systemctl --type=service'
