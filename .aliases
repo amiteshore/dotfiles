@@ -1,22 +1,16 @@
 #!/usr/bin/zsh
 
-# formats for listing files & directories
+# Formats for listing files & directories
 alias ls='ls --color=auto'
 alias l='ls -lAh'
 alias la='ls -A'
 
-# colorize grep output
+# Colorize grep output
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# confirm before overwriting something
-alias cp='cp -v -i'
-alias mv='mv -v -i'
-alias rm='rm -v -i'
-alias rmrf='rm -rfiv'
-
-# quickly change directories
+# Quickly change directories
 alias ~='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -32,14 +26,17 @@ alias pics='cd ~/Pictures'
 alias dot='cd ~/dotfiles'
 alias t='cd ~/Temporary'
 
-# open config files in vim
-alias vrc='vim ~/.vimrc'
-alias zrc='vim ~/.zshrc'
-alias ic='vim ~/.config/i3/config'
-alias ac='vim ~/.config/alacritty/alacritty.yml'
+# Open config files in vim
 alias al='vim ~/.aliases'
+alias i3conf='vim ~/.config/i3/config'
+alias alaconf='vim ~/.config/alacritty/alacritty.yml'
 
-# git
+alias zprofile='vim ~/.zprofile'
+alias zshenv='vim ~/.zshenv'
+alias zshrc='vim ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
+
+# Git
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
@@ -48,17 +45,22 @@ alias gp='git push'
 alias gl='git pull'
 alias gc='git commit'
 
-# misc
-alias h='history'
+# Misc
 alias v='vim'
 alias vi='vim'
-# alias cat='bat'
+
+alias h='history'
 alias code='code .'
-# alias mkdir='mkdir -v -p'
-alias path='echo -e ${PATH//:/\\n}'
+
+alias mkdir='mkdir -v -p'
+alias cp='cp -v -i'
+alias mv='mv -v -i'
+alias rm='rm -v -i'
+
+alias path='echo -e ${PATH//:/\\n}' # print each PATH entry on a separate line
 alias :q='exit' # quit like vim :)
 
-# systemctl shortcuts
+# Systemctl
 # alias sc-status='sudo systemctl status'
 # alias sc-start='sudo systemctl start'
 # alias sc-stop='sudo systemctl stop'

@@ -1,7 +1,3 @@
-"
-" ~/.vimrc
-"
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'

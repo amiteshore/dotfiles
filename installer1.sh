@@ -3,7 +3,7 @@
 # This file is responsible for installing packages
 # from the official arch repository.
 
-#--------------- UTILITIES ---------------#
+# =============== Utils =============== #
 pacman -S xorg          # group
 pacman -S base-devel    # group
 pacman -S xorg-xinit
@@ -11,7 +11,6 @@ pacman -S alarcritty
 pacman -S zsh
 pacman -S zsh-autosuggestions
 pacman -S zsh-syntax-highlighting
-pacman -S git
 pacman -S wget
 pacman -S curl
 pacman -S ufw
@@ -27,20 +26,20 @@ pacman -S openssh
 pacman -S polkit
 pacman -S aria2
 
-#--------------- RICING ---------------#
-pacman -S i3-gaps
-pacman -S i3status
-pacman -S i3lock
+# =============== Development =============== #
+pacman -S docker
 
-#--------------- GUI ---------------#
+# =============== GUI =============== #
 pacman -S chromium
 pacman -S vlc
 
-#--------------- DEVELOPMENT ---------------#
-pacman -S docker
-
-#--------------- FONTS ---------------#
+# =============== Fonts =============== #
 pacman -S ttf-fira-code
 pacman -S ttf-font-awesome
 pacman -S noto-fonts-emoji
 pacman -S noto-fonts
+
+# =============== Ricing =============== #
+pacman -S i3-gaps
+pacman -S i3status
+pacman -S i3lock

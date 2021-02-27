@@ -1,10 +1,11 @@
 #!/usr/bin/zsh
 
 #     SOURCE                                DESTINATION
+
 ln -s $HOME/dotfiles/.aliases               $HOME/.aliases
 ln -s $HOME/dotfiles/.gitconfig             $HOME/.gitconfig
 ln -s $HOME/dotfiles/.gvimrc                $HOME/.gvimrc
-ln -s $HOME/dotfiles/.vimrc                 $HOME/.xinitrc
+ln -s $HOME/dotfiles/.vimrc                 $HOME/.vimrc
 ln -s $HOME/dotfiles/.xinitrc               $HOME/.xinitrc
 ln -s $HOME/dotfiles/.zprofile              $HOME/.zprofile
 ln -s $HOME/dotfiles/.zshenv                $HOME/.zshenv
