@@ -9,8 +9,6 @@ pacman -S base-devel    # group
 pacman -S xorg-xinit
 pacman -S alarcritty
 pacman -S zsh
-pacman -S zsh-autosuggestions
-pacman -S zsh-syntax-highlighting
 pacman -S wget
 pacman -S curl
 pacman -S ufw
@@ -25,6 +23,13 @@ pacman -S rofi
 pacman -S openssh
 pacman -S polkit
 pacman -S aria2
+pacman -S zsh-autosuggestions
+pacman -S zsh-syntax-highlighting
+pacman -S zsh-history-substring-search
+pacman -S zsh-completions
+pacman -S bat
+pacman -S exa
+pacman -S ranger
 
 # =============== Development =============== #
 pacman -S docker
