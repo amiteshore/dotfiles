@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-# mkdir directories, if doesn't exists.
+# Create directories, if doesn't exists.
 mkdir --verbose --parents $HOME/Downloads
 mkdir --verbose --parents $HOME/Documents
 mkdir --verbose --parents $HOME/Pictures
@@ -14,10 +14,10 @@ mkdir --verbose --parents $HOME/.vim
 mkdir --verbose --parents $HOME/.zsh
 mkdir --verbose --parents $HOME/.config
 
-# install packages
+# Install packages
 ./installer1.sh
 
-# sync dotfiles to home directory
+# Sync dotfiles to home directory
 ./sync.sh
 
-./installer2.sh # run this after syncing the config files (specially for zsh)
+./installer2.sh # Run this after syncing the config files (specially for zsh)

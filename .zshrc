@@ -2,10 +2,11 @@
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*:warnings' format 'No matches for: %d'
-# auto-complete with case-insensitivity
+# Auto-complete with case-insensitivity
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 compinit
-_comp_options+=(globdots) # include hidden files
+# Include hidden files
+_comp_options+=(globdots)
 
 # =============== Prompt =============== #
 fpath+=$HOME/.zsh/pure
@@ -16,28 +17,32 @@ zstyle ':prompt:pure:prompt:error' color red
 prompt pure
 
 # =============== History config =============== #
-HISTFILE=~/.histfile        # where to save history to disk
-HISTSIZE=1000               # how many lines of history to keep in memory
-SAVEHIST=5000               # number of history entries to save to disk
-setopt hist_ignore_dups     # ignore duplicated commands history list
-setopt sharehistory         # share history across terminals
-setopt incappendhistory     # immediately append to the history file, not just when a term is killed
+HISTFILE=~/.histfile        # Where to save history to disk
+HISTSIZE=1000               # How many lines of history to keep in memory
+SAVEHIST=5000               # Number of history entries to save to disk
+setopt hist_ignore_dups     # Ignore duplicated commands history list
+setopt sharehistory         # Share history across terminals
+setopt incappendhistory     # Immediately append to the history file, not just when a term is killed
 
 # =============== Misc =============== #
-# persistent rehash
+# Persistent rehash
 zstyle ':completion:*' rehash true
 
-# set `vi` mode
+# Set `vi` mode
 bindkey -v
 
-# load aliases
+# Load aliases
 [[ -f ~/.aliases ]] && . ~/.aliases
 
 # =============== Plugins =============== #
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10' # Change foreground color
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10' # change foreground color
-
-# zsh-syntax-highlighting (should be last plugin)
+# zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# zsh-history-substring-search
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
