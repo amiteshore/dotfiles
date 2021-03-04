@@ -5,6 +5,8 @@ zstyle ':completion:*:warnings' format 'No matches for: %d'
 # Auto-complete with case-insensitivity
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 compinit
+# Persistent rehash
+zstyle ':completion:*' rehash true
 # Include hidden files
 _comp_options+=(globdots)
 
@@ -24,16 +26,6 @@ setopt hist_ignore_dups     # Ignore duplicated commands history list
 setopt sharehistory         # Share history across terminals
 setopt incappendhistory     # Immediately append to the history file, not just when a term is killed
 
-# =============== Misc =============== #
-# Persistent rehash
-zstyle ':completion:*' rehash true
-
-# Set `vi` mode
-bindkey -v
-
-# Load aliases
-[[ -f ~/.aliases ]] && . ~/.aliases
-
 # =============== Plugins =============== #
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -46,3 +38,17 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# =============== Keybindings =============== #
+bindkey '^[[1;5D'   backward-word         # ctrl+←
+bindkey '^[[1;5C'   forward-word          # ctrl+→
+bindkey '^[[1;6D'   beginning-of-line     # ctrl+shift+←
+bindkey '^[[1;6C'   end-of-line           # ctrl+shift+→
+bindkey '^H'        backward-delete-word  # ctrl+backspace
+
+# =============== Misc =============== #
+# Set `vi` mode
+bindkey -v
+
+# Load aliases
+[[ -f ~/.aliases ]] && . ~/.aliases
