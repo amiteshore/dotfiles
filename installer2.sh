@@ -10,12 +10,20 @@ makepkg -si
 cd ..
 rm -rf spotify
 
-# visual studio code
+# vs-code
 git clone https://aur.archlinux.org/visual-studio-code-bin.git
 cd visual-studio-code-bin
 makepkg -si
 cd ..
 rm -rf visual-studio-code-bin
+
+# Install some vs-code extensions
+code --install-extension sdras.night-owl
+code --install-extension PKief.material-icon-theme
+code --install-extension vscodevim.vim
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension bradlc.vscode-tailwindcss
 
 # mongodb
 git clone https://aur.archlinux.org/mongodb-bin.git
