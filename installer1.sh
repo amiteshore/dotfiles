@@ -30,6 +30,7 @@ pacman -S zsh-completions
 pacman -S bat
 pacman -S exa
 pacman -S ranger
+pacman -S thunar
 
 # =============== Development =============== #
 pacman -S docker

@@ -1,9 +1,7 @@
 #!/usr/bin/zsh
 
 #     SOURCE                                DESTINATION
-
 ln -s $HOME/dotfiles/.aliases               $HOME/.aliases
-ln -s $HOME/dotfiles/.gitconfig             $HOME/.gitconfig
 ln -s $HOME/dotfiles/.gvimrc                $HOME/.gvimrc
 ln -s $HOME/dotfiles/.vimrc                 $HOME/.vimrc
 ln -s $HOME/dotfiles/.xinitrc               $HOME/.xinitrc
@@ -19,3 +17,5 @@ ln -s $HOME/dotfiles/.config/neofetch       $HOME/.config/neofetch
 
 ln -s $HOME/dotfiles/.vim/autoload          $HOME/.vim/autoload
 ln -s $HOME/dotfiles/.vim/colors            $HOME/.vim/colors
+
+cp $HOME/dotfiles/.gitconfig $HOME/.gitconfig
