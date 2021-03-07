@@ -39,13 +39,14 @@ pacman -S docker
 pacman -S chromium
 pacman -S vlc
 
-# =============== Fonts =============== #
-pacman -S ttf-fira-code
-pacman -S ttf-font-awesome
-pacman -S noto-fonts-emoji
-pacman -S noto-fonts
-
 # =============== Ricing =============== #
 pacman -S i3-gaps
 pacman -S i3status
 pacman -S i3lock
+pacman -S gnome-themes-extra
+
+# =============== Fonts =============== #
+pacman -S ttf-fira-code
+pacman -S ttf-font-awesome
+pacman -S noto-fonts
+pacman -S noto-fonts-emoji
