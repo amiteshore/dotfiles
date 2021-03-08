@@ -12,6 +12,7 @@ set showcmd                   " Show the command as it's being typed
 set noshowmode                " Do not show current mode
 set visualbell                " Show visual error
 set noerrorbells              " Disable error bells
+set scrolloff=8               " Number of screen lines to keep above and below the cursor
 
 filetype plugin on
 filetype indent on
