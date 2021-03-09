@@ -1,0 +1,8 @@
+configuration {
+	modi: "run";
+  width: 50;
+  lines: 8;
+  font: "Fira Code 18";
+  theme: "solarized";
+  case-sensitive: false;
+}
