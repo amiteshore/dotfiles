@@ -184,5 +184,5 @@ exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
 for_window [class=".*"] border pixel 0
 
 # set inner/outer gaps
-gaps inner 10
-gaps outer -4
+gaps inner 2
+gaps outer 0
