@@ -10,17 +10,18 @@
   "editor.fontFamily": "'Fira Code'",
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
+  "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "none",
   "workbench.panel.defaultLocation": "right",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.colorCustomizations": {
-      "[Night Owl (No Italics)]": {
-          "activityBar.border": "#102a44",
-          "sideBar.border": "#102a44",
-          "statusBar.border": "#102a44",
-          // TODO: Change sideBar files and directories hover background color
-      }
+    "[Night Owl (No Italics)]": {
+      "activityBar.border": "#102a44",
+      "sideBar.border": "#102a44",
+      "statusBar.border": "#102a44"
+      // TODO: Change sideBar files and directories hover background color
+    }
   },
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": false

@@ -30,7 +30,7 @@ bindsym $mod+Shift+Return   exec --no-startup-id rofi -show run
 bindsym $mod+Return         exec alacritty
 bindsym $mod+F1             exec chromium
 bindsym $mod+F2             exec code
-bindsym $mod+F5             exec spotify
+bindsym $mod+F3             exec spotify
 
 bindsym $mod+Shift+c kill
 
@@ -41,10 +41,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -53,10 +53,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# bindsym $mod+Shift+Left move left
+# bindsym $mod+Shift+Down move down
+# bindsym $mod+Shift+Up move up
+# bindsym $mod+Shift+Right move right
 
 # split orientation
 bindsym $mod+z split h
@@ -139,10 +139,10 @@ mode "resize" {
         bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        # bindsym Left resize shrink width 10 px or 10 ppt
+        # bindsym Down resize grow height 10 px or 10 ppt
+        # bindsym Up resize shrink height 10 px or 10 ppt
+        # bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -178,7 +178,7 @@ bar {
 }
 
 # set background wallpaper
-exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
+exec --no-startup-id feh --randomize --bg-scale ~/Pictures/.wallpapers/*
 
 # disable window titlebars
 for_window [class=".*"] border pixel 0
