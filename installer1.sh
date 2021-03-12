@@ -31,6 +31,7 @@ pacman -S bat
 pacman -S exa
 pacman -S ranger
 pacman -S thunar
+pacman -S numlockx
 
 # =============== Development =============== #
 pacman -S docker
