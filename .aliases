@@ -1,9 +1,13 @@
 #!/usr/bin/zsh
 
 # Formats for listing files & directories
-alias ls='ls --color=auto'
-alias l='ls -lAh'
-alias la='ls -A'
+# alias ls='ls --color=auto'
+# alias l='ls -lAh'
+# alias la='ls -A'
+
+# Use exa for ls (exa is too long to type :)
+alias ls='exa --all'
+alias l='exa --all --long'
 
 # Colorize grep output
 alias grep='grep --color=auto'
@@ -51,11 +55,7 @@ alias vi='vim'
 
 alias h='history'
 alias code='code .'
-
-alias mkdir='mkdir -v -p'
-alias cp='cp -v -i'
-alias mv='mv -v -i'
-alias rm='rm -v -i'
+alias rg='ranger'
 
 alias path='echo -e ${PATH//:/\\n}' # print each PATH entry on a separate line
 alias :q='exit' # quit like vim :)
