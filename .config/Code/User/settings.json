@@ -20,8 +20,17 @@
       "activityBar.border": "#102a44",
       "sideBar.border": "#102a44",
       "statusBar.border": "#102a44"
-      // TODO: Change sideBar files and directories hover background color
+    },
+    "[Night Owl]": {
+      "activityBar.border": "#102a44",
+      "sideBar.border": "#102a44",
+      "statusBar.border": "#102a44"
     }
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": false

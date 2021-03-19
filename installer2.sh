@@ -20,7 +20,6 @@ rm -rf visual-studio-code-bin
 # Install some vs-code extensions
 code --install-extension sdras.night-owl
 code --install-extension PKief.material-icon-theme
-code --install-extension vscodevim.vim
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
 code --install-extension bradlc.vscode-tailwindcss

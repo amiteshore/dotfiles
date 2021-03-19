@@ -1,21 +1,33 @@
 // Place your key bindings in this file to override the defaults
 [
   {
-      "key": "ctrl+shift+/",
-      "command": "workbench.action.toggleStatusbarVisibility"
-    },
-    {
-      "key": "ctrl+shift+-",
-      "command": "workbench.action.toggleActivityBarVisibility"
-    },
-    {
-      "key": "ctrl+shift+down",
-      "command": "editor.action.copyLinesDownAction",
-      "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-      "key": "ctrl+shift+up",
-      "command": "editor.action.copyLinesUpAction",
-      "when": "editorTextFocus && !editorReadonly"
-    },
+    "key": "ctrl+shift+/",
+    "command": "workbench.action.toggleStatusbarVisibility"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+8",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "key": "ctrl+shift+9",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+  {
+    "key": "ctrl+l ctrl+m",
+    "command": "workbench.action.editor.changeLanguageMode"
+  }
 ]

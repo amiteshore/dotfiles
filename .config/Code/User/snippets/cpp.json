@@ -16,22 +16,22 @@
   },
   "Function Template": {
     "prefix": "function",
-    "body": ["${1:int} ${2:name}(${3:params}) {", "  $0", "}"],
+    "body": ["$1 $2($3) {", "  $0", "}"],
     "description": "Function Template"
   },
   "cout": {
     "prefix": "cout",
-    "body": ["cout << $0 << endl;"],
+    "body": ["cout << $0 << \"\\n\";"],
     "description": "cout"
   },
   "If Statement": {
     "prefix": "if",
-    "body": ["if (${1:condition}) {", "  $0", "}"],
+    "body": ["if ($1) {", "  $0", "}"],
     "description": "If Statement"
   },
   "If-Else Statement": {
     "prefix": "ifelse",
-    "body": ["if (${1:condition}) {", "  $0", "} else {", "  ", "}"],
+    "body": ["if ($1) {", "  $0", "} else {", "  ", "}"],
     "description": "If-Else Statement"
   }
 }
