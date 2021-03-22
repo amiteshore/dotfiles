@@ -7,7 +7,7 @@
   "explorer.confirmDelete": false,
   "editor.minimap.enabled": false,
   "editor.fontSize": 16,
-  "editor.fontFamily": "'Fira Code'",
+  "editor.fontFamily": "'Fira Code', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid'",
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "workbench.editor.enablePreview": false,

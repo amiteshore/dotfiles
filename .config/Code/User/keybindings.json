@@ -1,33 +1,37 @@
 // Place your key bindings in this file to override the defaults
 [
   {
-    "key": "ctrl+shift+/",
+    "key": "ctrl+meta+/",
     "command": "workbench.action.toggleStatusbarVisibility"
   },
   {
-    "key": "ctrl+shift+-",
+    "key": "ctrl+meta+-",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
   {
-    "key": "ctrl+shift+down",
+    "key": "ctrl+meta+down",
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+up",
+    "key": "ctrl+meta+up",
     "command": "editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+8",
+    "key": "ctrl+meta+s",
     "command": "workbench.action.openSettingsJson"
   },
   {
-    "key": "ctrl+shift+9",
+    "key": "ctrl+meta+k",
     "command": "workbench.action.openGlobalKeybindingsFile"
   },
   {
-    "key": "ctrl+l ctrl+m",
+    "key": "ctrl+l m",
     "command": "workbench.action.editor.changeLanguageMode"
+  },
+  {
+    "key": "ctrl+meta+z",
+    "command": "workbench.action.toggleZenMode"
   }
 ]
