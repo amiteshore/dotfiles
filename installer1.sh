@@ -36,10 +36,6 @@ pacman -S numlockx
 # =============== Development =============== #
 pacman -S docker
 
-# =============== GUI =============== #
-pacman -S chromium
-pacman -S vlc
-
 # =============== Ricing =============== #
 pacman -S i3-gaps
 pacman -S i3status

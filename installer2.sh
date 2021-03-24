@@ -3,19 +3,31 @@
 # This file is responsible for installing packages 
 # from the AUR and other sources.
 
-# spotify
-git clone https://aur.archlinux.org/spotify.git
-cd spotify
+AUR_DIR="$HOME/Downloads/AUR"
+
+# google-chrome
+git clone https://aur.archlinux.org/google-chrome.git "$AUR_DIR/google-chrome"
+cd "$AUR_DIR/google-chrome"
 makepkg -si
-cd ..
-rm -rf spotify
+echo # Add empty line
+
+# spotify
+git clone https://aur.archlinux.org/spotify.git "$AUR_DIR/spotify"
+cd "$AUR_DIR/spotify"
+makepkg -si
+echo # Add empty line
+
+# mongodb
+git clone https://aur.archlinux.org/mongodb-bin.git "$AUR_DIR/mongodb-bin"
+cd "$AUR_DIR/mongodb-bin"
+makepkg -si
+echo # Add empty line
 
 # vs-code
-git clone https://aur.archlinux.org/visual-studio-code-bin.git
-cd visual-studio-code-bin
+git clone https://aur.archlinux.org/visual-studio-code-bin.git "$AUR_DIR/visual-studio-code-bin"
+cd "$AUR_DIR/visual-studio-code-bin"
 makepkg -si
-cd ..
-rm -rf visual-studio-code-bin
+echo # Add empty line
 
 # Install some vs-code extensions
 code --install-extension sdras.night-owl
@@ -23,13 +35,8 @@ code --install-extension PKief.material-icon-theme
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
 code --install-extension bradlc.vscode-tailwindcss
-
-# mongodb
-git clone https://aur.archlinux.org/mongodb-bin.git
-cd mongodb-bin
-makepkg -si
-cd ..
-rm -rf mongodb-bin
+code --install-extension bierner.emojisense
+code --install-extension aaron-bond.better-comments
 
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
