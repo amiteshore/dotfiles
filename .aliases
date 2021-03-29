@@ -25,7 +25,7 @@ alias p='cd ~/projects'
 alias temp='cd ~/projects/temp'
 alias dev='cd ~/projects/dev'
 
-alias dl='cd ~/Downloads && ls -lAh'
+alias dl='cd ~/Downloads && exa --all --long --sort=time --reverse'
 alias pics='cd ~/Pictures'
 alias dot='cd ~/dotfiles'
 alias t='cd ~/Temporary'
