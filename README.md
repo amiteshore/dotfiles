@@ -2,12 +2,7 @@
 
 Dotfiles, built for Arch Linux.
 
-
-> Note: I use Dvorak keyboard layout, maybe my custom keyboard shortcuts will not be suitable for Qwerty, Colemak or other keyboard layout users. You'll have customize them for your best accessibility.
-
-## What's inside?
-
-Configuration for:
+### What's inside?
 
 <table>
   <tr>
@@ -26,14 +21,17 @@ Configuration for:
     <th>WM</th>
     <td>i3-gaps</td>
   </tr>
+  <tr>
+    <th>Monitor</th>
+    <td>htop</td>
+  </tr>
+  <tr>
+    <th>File Manager</th>
+    <td>ranger</td>
+  </tr>
 </table>
 
-## Features
-
-- Autostart X at login
-- Feature-rich `zsh` setup without oh-my-zsh
-
-## Installation
+### Installation
 
 A base installation of Arch Linux is required for this setup to work.
 
