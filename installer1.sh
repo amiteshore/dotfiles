@@ -9,6 +9,7 @@ pacman -S base-devel    # group
 pacman -S xorg-xinit
 pacman -S alarcritty
 pacman -S zsh
+pacman -S clang
 pacman -S wget
 pacman -S curl
 pacman -S ufw

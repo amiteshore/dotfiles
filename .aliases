@@ -1,11 +1,6 @@
 #!/usr/bin/zsh
 
-# Formats for listing files & directories
-# alias ls='ls --color=auto'
-# alias l='ls -lAh'
-# alias la='ls -A'
-
-# Use exa for ls (exa is too long to type :)
+# Use exa for listing files & directories
 alias ls='exa --all'
 alias l='exa --all --long'
 
@@ -53,20 +48,22 @@ alias gc='git commit'
 alias v='vim'
 alias vi='vim'
 
+alias cat='bat'
 alias h='history'
 alias code='code .'
 alias rg='ranger'
+alias neo='neofetch'
 
 alias path='echo -e ${PATH//:/\\n}' # print each PATH entry on a separate line
 alias :q='exit' # quit like vim :)
 
 # Systemctl
-# alias sc-status='sudo systemctl status'
-# alias sc-start='sudo systemctl start'
-# alias sc-stop='sudo systemctl stop'
-# alias sc-restart='sudo systemctl restart'
-# alias sc-enable='sudo systemctl enable'
-# alias sc-disable='sudo systemctl disable'
-# alias running='sudo systemctl --type=service --state=running'
-# alias exited='sudo systemctl --type=service --state=exited'
-# alias services='sudo systemctl --type=service'
+alias sc-status='sudo systemctl status'
+alias sc-start='sudo systemctl start'
+alias sc-stop='sudo systemctl stop'
+alias sc-restart='sudo systemctl restart'
+alias sc-enable='sudo systemctl enable'
+alias sc-disable='sudo systemctl disable'
+
+alias sc-running='sudo systemctl --type=service --state=running'
+alias sc-services='sudo systemctl --type=service'
