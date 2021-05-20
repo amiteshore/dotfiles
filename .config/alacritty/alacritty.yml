@@ -19,7 +19,7 @@ font:
     style: Bold
 
 mouse:
-  url:
+  hints:
     launcher: chromium
 
 # Solarized dark
