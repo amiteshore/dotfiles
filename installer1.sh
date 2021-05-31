@@ -1,15 +1,15 @@
 #!/usr/bin/zsh
 
-# This file is responsible for installing packages
-# from the official arch repository.
+# Install packages from the official repo and other sources
 
 # =============== Utils =============== #
 pacman -S xorg          # group
 pacman -S base-devel    # group
 pacman -S xorg-xinit
+pacman -S firefox-developer-edition
 pacman -S alarcritty
+pacman -S vim
 pacman -S zsh
-pacman -S clang
 pacman -S wget
 pacman -S curl
 pacman -S ufw
@@ -34,6 +34,8 @@ pacman -S zsh-history-substring-search  # zsh plugin
 pacman -S zsh-completions               # zsh plugin
 
 # =============== Development =============== #
+pacman -S mariadb
+pacman -S clang
 pacman -S docker
 
 # =============== Ricing =============== #
@@ -47,3 +49,6 @@ pacman -S ttf-fira-code
 pacman -S ttf-font-awesome
 pacman -S noto-fonts
 pacman -S noto-fonts-emoji
+
+# =============== Pure prompt =============== #
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"

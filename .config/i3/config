@@ -4,23 +4,11 @@ set $mod Mod4
 # Font for window titles (although I've no windows)
 font pango:Noto Sans 8
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-# exec --no-startup-id nm-applet
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -29,10 +17,9 @@ floating_modifier $mod
 bindsym $mod+Shift+Return   exec --no-startup-id rofi -show run
 bindsym $mod+Return         exec alacritty
 bindsym $mod+F1             exec google-chrome-stable
-bindsym $mod+F2             exec code
+bindsym $mod+F2             exec firefox-developer-edition
 bindsym $mod+F3             exec spotify
-
-bindsym $mod+Shift+c kill
+bindsym $mod+Shift+c        kill
 
 # change focus
 bindsym $mod+h focus left
@@ -40,23 +27,11 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-# bindsym $mod+Left focus left
-# bindsym $mod+Down focus down
-# bindsym $mod+Up focus up
-# bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
-# bindsym $mod+Shift+Left move left
-# bindsym $mod+Shift+Down move down
-# bindsym $mod+Shift+Up move up
-# bindsym $mod+Shift+Right move right
 
 # split orientation
 bindsym $mod+z split h
@@ -138,12 +113,6 @@ mode "resize" {
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        # bindsym Left resize shrink width 10 px or 10 ppt
-        # bindsym Down resize grow height 10 px or 10 ppt
-        # bindsym Up resize shrink height 10 px or 10 ppt
-        # bindsym Right resize grow width 10 px or 10 ppt
-
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -157,9 +126,6 @@ mode "$mode_system" {
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-
-    # bindsym s exec --no-startup-id i3lock && systemctl suspend, mode "default"
-    # bindsym h exec --no-startup-id i3lock && systemctl hibernate, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -178,11 +144,15 @@ bar {
 }
 
 # set background wallpaper
-exec --no-startup-id feh --randomize --bg-scale ~/Pictures/.wallpapers/*
+exec --no-startup-id feh --bg-fill --randomize ~/Pictures/.wallpapers/*
 
 # disable window titlebars
 for_window [class=".*"] border pixel 0
 
+# Only enable gaps on a workspace when there is at least one container
+smart_gaps on
+smart_borders on
+
 # set inner/outer gaps
-gaps inner 2
-gaps outer 0
+gaps inner 6
+gaps outer -3

@@ -3,7 +3,7 @@
 # Create directories, if doesn't exists.
 mkdir --verbose --parents $HOME/Downloads/AUR
 mkdir --verbose --parents $HOME/Documents
-mkdir --verbose --parents $HOME/Pictures/.wallpapers
+mkdir --verbose --parents $HOME/Pictures
 mkdir --verbose --parents $HOME/Temporary
 
 mkdir --verbose --parents $HOME/projects/dev

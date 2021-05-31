@@ -1,5 +1,5 @@
 {
-  "window.zoomLevel": 1.8,
+  "window.zoomLevel": 1.65,
   "window.menuBarVisibility": "toggle",
   "breadcrumbs.enabled": false,
   "explorer.openEditors.visible": 0,
@@ -32,6 +32,8 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "prettier.trailingComma": "none",
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": false
 }

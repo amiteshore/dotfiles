@@ -15,7 +15,7 @@ Dotfiles, built for Arch Linux.
   </tr>
   <tr>
     <th>Editor</th>
-    <td>vim</td>
+    <td>vim/code</td>
   </tr>
   <tr>
     <th>WM</th>
@@ -45,6 +45,6 @@ cd $HOME/dotfiles
 ./bootstrap.sh
 ```
 
-This will make some directories (see [bootstrap.sh](https://github.com/amiteshore/dotfiles/blob/master/bootstrap.sh)) in your home folder, install some packages (see [installer1.sh](https://github.com/amiteshore/dotfiles/blob/master/installer1.sh) and [installer2.sh](https://github.com/amiteshore/dotfiles/blob/master/installer2.sh)) and create symlinks (see [sync.sh](https://github.com/amiteshore/dotfiles/blob/master/sync.sh)) from this repo to your home directory.
+This will make some directories ([bootstrap.sh](https://github.com/amiteshore/dotfiles/blob/master/bootstrap.sh)) in your home folder, install some packages ([installer1.sh](https://github.com/amiteshore/dotfiles/blob/master/installer1.sh) and [installer2.sh](https://github.com/amiteshore/dotfiles/blob/master/installer2.sh)) and create symlinks ([sync.sh](https://github.com/amiteshore/dotfiles/blob/master/sync.sh)) from this repo to your home directory.
 
 Note: Some changes may require a quick restart.

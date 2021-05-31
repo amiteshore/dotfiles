@@ -58,12 +58,10 @@ alias path='echo -e ${PATH//:/\\n}' # print each PATH entry on a separate line
 alias :q='exit' # quit like vim :)
 
 # Systemctl
-alias sc-status='sudo systemctl status'
-alias sc-start='sudo systemctl start'
-alias sc-stop='sudo systemctl stop'
-alias sc-restart='sudo systemctl restart'
-alias sc-enable='sudo systemctl enable'
-alias sc-disable='sudo systemctl disable'
+alias status='sudo systemctl status'
+alias start='sudo systemctl start'
+alias stop='sudo systemctl stop'
+alias restart='sudo systemctl restart'
 
-alias sc-running='sudo systemctl --type=service --state=running'
-alias sc-services='sudo systemctl --type=service'
+alias running='sudo systemctl --type=service --state=running'
+alias services='sudo systemctl --type=service'

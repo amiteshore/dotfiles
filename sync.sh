@@ -4,7 +4,6 @@ GTK3_CONFIG=".config/gtk-3.0/settings.ini"
 
 #     SOURCE                                DESTINATION
 ln -s $HOME/dotfiles/.aliases               $HOME/.aliases
-ln -s $HOME/dotfiles/.gvimrc                $HOME/.gvimrc
 ln -s $HOME/dotfiles/.vimrc                 $HOME/.vimrc
 ln -s $HOME/dotfiles/.xinitrc               $HOME/.xinitrc
 ln -s $HOME/dotfiles/.zprofile              $HOME/.zprofile
@@ -22,5 +21,6 @@ ln -s $HOME/dotfiles/.config/rofi           $HOME/.config/rofi
 
 ln -s $HOME/dotfiles/.vim/autoload          $HOME/.vim/autoload
 ln -s $HOME/dotfiles/.vim/colors            $HOME/.vim/colors
+ln -s $HOME/dotfiles/.wallpapers            $HOME/Pictures/.wallpapers
 
-cp $HOME/dotfiles/.gitconfig $HOME/.gitconfig
+cp    $HOME/dotfiles/.gitconfig             $HOME/.gitconfig
