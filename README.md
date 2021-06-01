@@ -43,8 +43,9 @@ Run this:
 git clone https://github.com/amiteshore/dotfiles.git "$HOME/dotfiles"
 cd $HOME/dotfiles
 ./bootstrap.sh
+./installer.sh
 ```
 
-This will make some directories ([bootstrap.sh](https://github.com/amiteshore/dotfiles/blob/master/bootstrap.sh)) in your home folder, install some packages ([installer1.sh](https://github.com/amiteshore/dotfiles/blob/master/installer1.sh) and [installer2.sh](https://github.com/amiteshore/dotfiles/blob/master/installer2.sh)) and create symlinks ([sync.sh](https://github.com/amiteshore/dotfiles/blob/master/sync.sh)) from this repo to your home directory.
+Note: The installer will ask for password and permissions (again and again) before installing anything.
 
 Note: Some changes may require a quick restart.

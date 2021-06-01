@@ -1,22 +1,42 @@
 #!/usr/bin/zsh
 
 # Create directories, if doesn't exists.
-mkdir --verbose --parents $HOME/Downloads/AUR
-mkdir --verbose --parents $HOME/Documents
-mkdir --verbose --parents $HOME/Pictures
-mkdir --verbose --parents $HOME/Temporary
+mkdir -vp $HOME/Downloads/AUR
+mkdir -vp $HOME/Documents
+mkdir -vp $HOME/Pictures/.wallpapers
+mkdir -vp $HOME/Temporary
 
-mkdir --verbose --parents $HOME/projects/dev
-mkdir --verbose --parents $HOME/projects/temp
+mkdir -vp $HOME/projects/dev
+mkdir -vp $HOME/projects/temp
 
-mkdir --verbose --parents $HOME/.vim
-mkdir --verbose --parents $HOME/.zsh
-mkdir --verbose --parents $HOME/.config
+mkdir -vp $HOME/.vim
+mkdir -vp $HOME/.zsh
+mkdir -vp $HOME/.config/Code
 
-# Install packages
-./installer1.sh
+# Copy files and directories
 
-# Sync dotfiles to home directory
-./sync.sh
+#         SOURCE                                DESTINATION
+cp  -v    $HOME/dotfiles/.aliases               $HOME/
+cp  -v    $HOME/dotfiles/.exports               $HOME/
+cp  -v    $HOME/dotfiles/.gitconfig             $HOME/
+cp  -v    $HOME/dotfiles/.gtkrc-2.0             $HOME/
+cp  -v    $HOME/dotfiles/.vimrc                 $HOME/
+cp  -v    $HOME/dotfiles/.xinitrc               $HOME/
+cp  -v    $HOME/dotfiles/.zprofile              $HOME/
+cp  -v    $HOME/dotfiles/.zshenv                $HOME/
+cp  -v    $HOME/dotfiles/.zshrc                 $HOME/
 
-./installer2.sh # Run this after syncing the config files (specially for zsh)
+cp  -vr   $HOME/dotfiles/.config/gtk-3.0        $HOME/.config/
+cp  -vr   $HOME/dotfiles/.config/alacritty      $HOME/.config/
+cp  -vr   $HOME/dotfiles/.config/i3             $HOME/.config/
+cp  -vr   $HOME/dotfiles/.config/i3status       $HOME/.config/
+cp  -vr   $HOME/dotfiles/.config/neofetch       $HOME/.config/
+cp  -vr   $HOME/dotfiles/.config/rofi           $HOME/.config/
+cp  -vr   $HOME/dotfiles/.config/Code/User      $HOME/.config/Code/
+
+cp  -vr   $HOME/dotfiles/.vim/autoload          $HOME/.vim/
+cp  -vr   $HOME/dotfiles/.vim/colors            $HOME/.vim/
+cp  -vr   $HOME/dotfiles/.wallpapers            $HOME/Pictures/
+
+# Clone pure prompt
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
