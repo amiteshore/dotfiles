@@ -56,12 +56,3 @@ alias neo='neofetch'
 
 alias path='echo -e ${PATH//:/\\n}' # print each PATH entry on a separate line
 alias :q='exit' # quit like vim :)
-
-# Systemctl
-alias status='sudo systemctl status'
-alias start='sudo systemctl start'
-alias stop='sudo systemctl stop'
-alias restart='sudo systemctl restart'
-
-alias running='sudo systemctl --type=service --state=running'
-alias services='sudo systemctl --type=service'

@@ -7,25 +7,22 @@ sudo pacman -S xorg          # group
 sudo pacman -S base-devel    # group
 sudo pacman -S xorg-xinit
 sudo pacman -S firefox-developer-edition
-sudo pacman -S alarcritty
-sudo pacman -S vim
-sudo pacman -S zsh
+sudo pacman -S alacritty
 sudo pacman -S wget
 sudo pacman -S curl
 sudo pacman -S ufw
 sudo pacman -S tree
-sudo pacman -S htop
-sudo pacman -S rsync
-sudo pacman -S neofetch
-sudo pacman -S feh
-sudo pacman -S pulseaudio
-sudo pacman -S rofi
-sudo pacman -S openssh
-sudo pacman -S polkit
-sudo pacman -S aria2
 sudo pacman -S bat
 sudo pacman -S exa
 sudo pacman -S ranger
+sudo pacman -S rsync
+sudo pacman -S openssh
+sudo pacman -S htop
+sudo pacman -S neofetch
+sudo pacman -S feh
+sudo pacman -S rofi
+sudo pacman -S pulseaudio
+sudo pacman -S aria2
 sudo pacman -S thunar
 sudo pacman -S numlockx
 sudo pacman -S zsh-autosuggestions           # zsh plugin
@@ -35,8 +32,8 @@ sudo pacman -S zsh-completions               # zsh plugin
 
 # =============== Development =============== #
 sudo pacman -S mariadb
-sudo pacman -S clang
 sudo pacman -S docker
+sudo pacman -S httpie
 
 # =============== Ricing =============== #
 sudo pacman -S i3-gaps
@@ -78,8 +75,9 @@ code --install-extension sdras.night-owl
 code --install-extension PKief.material-icon-theme
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
-code --install-extension bierner.emojisense
 code --install-extension aaron-bond.better-comments
+code --install-extension humao.rest-client
+code --install-extension bierner.emojisense
 code --install-extension yzhang.markdown-all-in-one
 
 # =============== nvm & node =============== #

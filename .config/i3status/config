@@ -1,7 +1,7 @@
 general {
   colors = true
   interval = 1
-  separator = ""
+  separator = "|"
 }
 
 order += "volume master"

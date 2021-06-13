@@ -12,7 +12,7 @@
   "editor.tabSize": 2,
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "none",
-  "workbench.panel.defaultLocation": "right",
+  "workbench.panel.defaultLocation": "bottom",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.colorCustomizations": {

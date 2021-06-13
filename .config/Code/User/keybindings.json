@@ -33,5 +33,21 @@
   {
     "key": "ctrl+meta+z",
     "command": "workbench.action.toggleZenMode"
+  },
+  // Switch tabs like browsers
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  // Toggle between terminal and editor focus
+  { "key": "ctrl+`", "command": "workbench.action.terminal.focus" },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
   }
 ]
