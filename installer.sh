@@ -8,6 +8,7 @@ sudo pacman -S base-devel    # group
 sudo pacman -S xorg-xinit
 sudo pacman -S firefox-developer-edition
 sudo pacman -S alacritty
+sudo pacman -S tmux
 sudo pacman -S wget
 sudo pacman -S curl
 sudo pacman -S ufw
@@ -32,6 +33,7 @@ sudo pacman -S zsh-completions               # zsh plugin
 
 # =============== Development =============== #
 sudo pacman -S mariadb
+sudo pacman -S redis
 sudo pacman -S docker
 sudo pacman -S httpie
 
