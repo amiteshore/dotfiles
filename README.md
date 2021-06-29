@@ -15,7 +15,11 @@ Dotfiles, built for Arch Linux.
   </tr>
   <tr>
     <th>Editor</th>
-    <td>vim/code</td>
+    <td>neovim</td>
+  </tr>
+  <tr>
+    <th>Multiplexer</th>
+    <td>tmux</td>
   </tr>
   <tr>
     <th>WM</th>

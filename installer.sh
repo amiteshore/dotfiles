@@ -9,6 +9,8 @@ sudo pacman -S xorg-xinit
 sudo pacman -S firefox-developer-edition
 sudo pacman -S alacritty
 sudo pacman -S tmux
+sudo pacman -S neovim
+sudo pacman -S code
 sudo pacman -S wget
 sudo pacman -S curl
 sudo pacman -S ufw
@@ -66,25 +68,17 @@ cd $AUR_DIR/spotify
 makepkg -si
 echo
 
-# =============== visual studio code =============== #
-git clone https://aur.archlinux.org/visual-studio-code-bin.git "$AUR_DIR/visual-studio-code-bin"
-cd "$AUR_DIR/visual-studio-code-bin"
-makepkg -si
-echo
-
-# =============== code extensions =============== #
-code --install-extension sdras.night-owl
-code --install-extension PKief.material-icon-theme
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension esbenp.prettier-vscode
-code --install-extension aaron-bond.better-comments
-code --install-extension humao.rest-client
-code --install-extension bierner.emojisense
-code --install-extension yzhang.markdown-all-in-one
-
 # =============== nvm & node =============== #
 echo "\n" >> "$HOME/.zshrc"
 echo -n "# Load nvm script" >> "$HOME/.zshrc"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.zshrc
 nvm install node
+
+# =============== code extensions =============== #
+code --install-extension sdras.night-owl
+code --install-extension PKief.material-icon-theme
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension vscodevim.vim
+code --install-extension humao.rest-client
