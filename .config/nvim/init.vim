@@ -1,0 +1,65 @@
+" =============== vim-plug ===============
+call plug#begin('~/.vim/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
+Plug 'morhetz/gruvbox'
+Plug 'herringtondarkholme/yats.vim'
+
+call plug#end()
+
+" =============== Coloring ===============
+set termguicolors
+syntax enable
+colorscheme gruvbox
+
+" =============== General ===============
+set number
+set history=100
+set showcmd
+set laststatus=2
+set noshowmode
+set scrolloff=8
+
+" =============== Indentation ===============
+set expandtab
+set smarttab
+set shiftwidth=2
+set tabstop=2
+
+" =============== Indentation ===============
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+" =============== Plugin configurations ===============
+
+" Coc extensions
+let g:coc_global_extensions = [
+\  'coc-tsserver', 
+\  'coc-eslint', 
+\  'coc-prettier', 
+\  'coc-json', 
+\  'coc-css',
+\  'coc-pairs', 
+\  'coc-snippets'
+\  ]
+
+" Toggle NERDTree
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
+
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Prettier 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Lightline
+let g:lightline = { 'colorscheme': 'gruvbox'}
+ 
+" =============== Custom mappings ===============
