@@ -25,6 +25,7 @@ cp  -v    $HOME/dotfiles/.xinitrc               $HOME/
 cp  -v    $HOME/dotfiles/.zprofile              $HOME/
 cp  -v    $HOME/dotfiles/.zshenv                $HOME/
 cp  -v    $HOME/dotfiles/.zshrc                 $HOME/
+cp  -v    $HOME/dotfiles/.tmux.conf             $HOME/
 
 cp  -vr   $HOME/dotfiles/.config/gtk-3.0        $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/alacritty      $HOME/.config/
