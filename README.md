@@ -53,3 +53,9 @@ cd $HOME/dotfiles
 Note: The installer will ask for password and permissions (again and again) before installing anything.
 
 Note: Some changes may require a quick restart.
+
+### Post-installation
+
+Run `:PlugInstall` on `~/.config/nvim/init.vim`.
+
+Add name and email inside `~/.gitignore`.

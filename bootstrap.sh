@@ -9,7 +9,6 @@ mkdir -vp $HOME/Temporary
 mkdir -vp $HOME/projects/dev
 mkdir -vp $HOME/projects/temp
 
-mkdir -vp $HOME/.vim
 mkdir -vp $HOME/.zsh
 mkdir -vp $HOME/.config/Code
 
@@ -20,7 +19,6 @@ cp  -v    $HOME/dotfiles/.aliases               $HOME/
 cp  -v    $HOME/dotfiles/.exports               $HOME/
 cp  -v    $HOME/dotfiles/.gitconfig             $HOME/
 cp  -v    $HOME/dotfiles/.gtkrc-2.0             $HOME/
-cp  -v    $HOME/dotfiles/.vimrc                 $HOME/
 cp  -v    $HOME/dotfiles/.xinitrc               $HOME/
 cp  -v    $HOME/dotfiles/.zprofile              $HOME/
 cp  -v    $HOME/dotfiles/.zshenv                $HOME/
@@ -28,6 +26,7 @@ cp  -v    $HOME/dotfiles/.zshrc                 $HOME/
 cp  -v    $HOME/dotfiles/.tmux.conf             $HOME/
 
 cp  -vr   $HOME/dotfiles/.config/gtk-3.0        $HOME/.config/
+cp  -vr   $HOME/dotfiles/.config/nvim           $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/alacritty      $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/i3             $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/i3status       $HOME/.config/
@@ -35,8 +34,6 @@ cp  -vr   $HOME/dotfiles/.config/neofetch       $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/rofi           $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/Code/User      $HOME/.config/Code/
 
-cp  -vr   $HOME/dotfiles/.vim/autoload          $HOME/.vim/
-cp  -vr   $HOME/dotfiles/.vim/colors            $HOME/.vim/
 cp  -vr   $HOME/dotfiles/.wallpapers            $HOME/Pictures/
 
 # Clone pure prompt

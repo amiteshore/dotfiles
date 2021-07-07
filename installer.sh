@@ -75,6 +75,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.zshrc
 nvm install node
 
+# =============== vim-plug =============== #
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 # =============== code extensions =============== #
 code --install-extension sdras.night-owl
 code --install-extension PKief.material-icon-theme

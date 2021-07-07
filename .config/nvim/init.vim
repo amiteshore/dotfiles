@@ -1,11 +1,13 @@
 " =============== vim-plug ===============
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'herringtondarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
 
@@ -34,6 +36,9 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" Set , as mapleader
+let mapleader = ","
+
 " =============== Plugin configurations ===============
 
 " Coc extensions
@@ -47,10 +52,11 @@ let g:coc_global_extensions = [
 \  'coc-snippets'
 \  ]
 
-" Toggle NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
-
-" Show hidden files in NERDTree
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 
 " Exit Vim if NERDTree is the only window left.
@@ -61,5 +67,13 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Lightline
 let g:lightline = { 'colorscheme': 'gruvbox'}
+
+" CtrlP
+let g:ctrlp_custom_ignore = 'node_modules'
  
 " =============== Custom mappings ===============
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>wq :wq<CR>
+nnoremap <leader>Q :q!<CR>
