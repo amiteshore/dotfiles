@@ -1,15 +1,6 @@
 #!/usr/bin/zsh
 
-# Use exa for listing files & directories
-alias ls='exa --all'
-alias l='exa --all --long'
-
-# Colorize grep output
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-
-# Quickly change directories
+# quickly change directories
 alias ~='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -21,21 +12,22 @@ alias temp='cd ~/projects/temp'
 alias dev='cd ~/projects/dev'
 
 alias dl='cd ~/Downloads && exa --all --long --sort=time --reverse'
+alias aur="cd ~/Downloads/AUR"
 alias pics='cd ~/Pictures'
 alias dot='cd ~/dotfiles'
 alias t='cd ~/Temporary'
 
-# Open config files in vim
+# open config files 
 alias al='vim ~/.aliases'
-alias i3conf='vim ~/.config/i3/config'
-alias alaconf='vim ~/.config/alacritty/alacritty.yml'
-
 alias zprofile='vim ~/.zprofile'
 alias zshenv='vim ~/.zshenv'
 alias zshrc='vim ~/.zshrc'
-alias vimrc='vim ~/.vimrc'
+alias vimrc='vim ~/.config/nvim/init.vim'
+alias tmuxconf="vim ~/.tmux.conf"
+alias i3conf='vim ~/.config/i3/config'
+alias alaconf='vim ~/.config/alacritty/alacritty.yml'
 
-# Git
+# git
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
@@ -44,15 +36,33 @@ alias gp='git push'
 alias gl='git pull'
 alias gc='git commit'
 
-# Misc
-alias v='vim'
-alias vi='vim'
+# systemd
+alias start="sudo systemctl start "
+alias stop="sudo systemctl stop "
+alias status="sudo systemctl status "
+alias running="sudo systemctl --state=running --type=service"
 
+# pacman
+alias pac='sudo pacman -S'     # install
+alias pacu='sudo pacman -Syu'  # update and upgrade
+alias pacr='sudo pacman -Rsn'  # remove
+alias paclo='sudo pacman -Qdt' # list orphans
+alias pacro='paclo && sudo pacman -Rns $(pacman -Qtdq)' # remove orphans
+alias pacc='sudo pacman -Scc'  # clean cache
+
+# misc
+alias grep='grep --color=auto --line-number'
+alias ls='exa --all'
+alias l='exa --all --long'
+
+alias vim='nvim'
 alias cat='bat'
 alias h='history'
 alias code='code .'
 alias rg='ranger'
 alias neo='neofetch'
+alias sz="source ~/.zshrc"
 
 alias path='echo -e ${PATH//:/\\n}' # print each PATH entry on a separate line
-alias :q='exit' # quit like vim :)
+
+# temporary
