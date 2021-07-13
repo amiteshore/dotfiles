@@ -3,7 +3,7 @@
 # Create directories, if doesn't exists.
 mkdir -vp $HOME/Downloads/AUR
 mkdir -vp $HOME/Documents
-mkdir -vp $HOME/Pictures/.wallpapers
+mkdir -vp $HOME/Pictures
 mkdir -vp $HOME/Temporary
 
 mkdir -vp $HOME/projects/dev
@@ -34,6 +34,7 @@ cp  -vr   $HOME/dotfiles/.config/neofetch       $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/rofi           $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/Code/User      $HOME/.config/Code/
 
+cp  -vr   $HOME/dotfiles/bin                    $HOME/
 cp  -vr   $HOME/dotfiles/.wallpapers            $HOME/Pictures/
 
 # Clone pure prompt
