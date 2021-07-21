@@ -38,6 +38,7 @@ sudo pacman -S mariadb
 sudo pacman -S redis
 sudo pacman -S docker
 sudo pacman -S httpie
+sudo pacman -S nginx
 
 # =============== Ricing =============== #
 sudo pacman -S i3-gaps
@@ -74,6 +75,9 @@ echo -n "# Load nvm script" >> "$HOME/.zshrc"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.zshrc
 nvm install node
+
+# =============== npm global pagkages =============== #
+npm install -g redis-commander nodemon
 
 # =============== vim-plug =============== #
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
