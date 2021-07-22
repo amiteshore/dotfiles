@@ -13,6 +13,7 @@ sudo pacman -S neovim
 sudo pacman -S code
 sudo pacman -S wget
 sudo pacman -S curl
+sudo pacman -S fzf
 sudo pacman -S ufw
 sudo pacman -S tree
 sudo pacman -S bat
