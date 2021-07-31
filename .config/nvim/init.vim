@@ -23,6 +23,7 @@ set showcmd
 set laststatus=2
 set noshowmode
 set scrolloff=8
+set clipboard^=unnamed,unnamedplus
 
 " =============== Indentation ===============
 set expandtab

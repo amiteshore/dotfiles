@@ -28,6 +28,7 @@ sudo pacman -S rofi
 sudo pacman -S pulseaudio
 sudo pacman -S aria2
 sudo pacman -S thunar
+sudo pacman -S xsel
 sudo pacman -S numlockx
 sudo pacman -S zsh-autosuggestions           # zsh plugin
 sudo pacman -S zsh-syntax-highlighting       # zsh plugin
