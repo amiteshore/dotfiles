@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mattn/emmet-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'herringtondarkholme/yats.vim'
@@ -62,6 +63,10 @@ let NERDTreeShowHidden=1
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Emmet
+let g:user_emmet_mode='i'
+imap ,, <C-y>,
 
 " Prettier 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
