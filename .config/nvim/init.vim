@@ -5,9 +5,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
+Plug 'haishanh/night-owl.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'morhetz/gruvbox'
-Plug 'herringtondarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
@@ -15,7 +14,7 @@ call plug#end()
 " =============== Coloring ===============
 set termguicolors
 syntax enable
-colorscheme gruvbox
+colorscheme night-owl
 
 " =============== General ===============
 set number
@@ -72,7 +71,7 @@ imap ,, <C-y>,
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Lightline
-let g:lightline = { 'colorscheme': 'gruvbox'}
+let g:lightline = { 'colorscheme': 'nightowl'}
 
 " CtrlP
 let g:ctrlp_custom_ignore = 'node_modules'
