@@ -55,13 +55,14 @@ let g:coc_global_extensions = [
 
 " NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 " Emmet
 let g:user_emmet_mode='i'
