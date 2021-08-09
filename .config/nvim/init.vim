@@ -75,6 +75,8 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:lightline = { 'colorscheme': 'nightowl'}
 
 " CtrlP
+let g:ctrlp_map = '<leader>p'
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = 'node_modules'
  
 " =============== Custom mappings ===============
@@ -83,3 +85,12 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>wq :wq<CR>
 nnoremap <leader>Q :q!<CR>
+
+nnoremap <leader>t :tabnew<Space>
+inoremap <leader>t <Esc>:tabnew<Space>
+
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END

@@ -17,13 +17,14 @@ mkdir -vp $HOME/.config/Code
 #         SOURCE                                DESTINATION
 cp  -v    $HOME/dotfiles/.aliases               $HOME/
 cp  -v    $HOME/dotfiles/.exports               $HOME/
+cp  -v    $HOME/dotfiles/.functions             $HOME/
 cp  -v    $HOME/dotfiles/.gitconfig             $HOME/
 cp  -v    $HOME/dotfiles/.gtkrc-2.0             $HOME/
+cp  -v    $HOME/dotfiles/.tmux.conf             $HOME/
 cp  -v    $HOME/dotfiles/.xinitrc               $HOME/
 cp  -v    $HOME/dotfiles/.zprofile              $HOME/
 cp  -v    $HOME/dotfiles/.zshenv                $HOME/
 cp  -v    $HOME/dotfiles/.zshrc                 $HOME/
-cp  -v    $HOME/dotfiles/.tmux.conf             $HOME/
 
 cp  -vr   $HOME/dotfiles/.config/gtk-3.0        $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/nvim           $HOME/.config/
