@@ -11,6 +11,9 @@ sudo pacman -S alacritty
 sudo pacman -S tmux
 sudo pacman -S neovim
 sudo pacman -S code
+sudo pacman -S python
+sudo pacman -S python-pip
+sudo pacman -S python-pynvim
 sudo pacman -S wget
 sudo pacman -S curl
 sudo pacman -S fzf

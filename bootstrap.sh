@@ -10,7 +10,7 @@ mkdir -vp $HOME/projects/dev
 mkdir -vp $HOME/projects/temp
 
 mkdir -vp $HOME/.zsh
-mkdir -vp $HOME/.config/Code
+mkdir -vp "$HOME/.config/Code - OSS"
 
 # Copy files and directories
 
@@ -33,7 +33,7 @@ cp  -vr   $HOME/dotfiles/.config/i3             $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/i3status       $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/neofetch       $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/rofi           $HOME/.config/
-cp  -vr   $HOME/dotfiles/.config/Code/User      $HOME/.config/Code/
+cp  -vr   "$HOME/dotfiles/.config/Code - OSS/User"      "$HOME/.config/Code - OSS/"
 
 cp  -vr   $HOME/dotfiles/bin                    $HOME/
 cp  -vr   $HOME/dotfiles/.wallpapers            $HOME/Pictures/
