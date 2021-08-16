@@ -28,7 +28,6 @@ sudo pacman -S htop
 sudo pacman -S neofetch
 sudo pacman -S feh
 sudo pacman -S rofi
-sudo pacman -S pulseaudio
 sudo pacman -S aria2
 sudo pacman -S thunar
 sudo pacman -S xsel
@@ -37,6 +36,14 @@ sudo pacman -S zsh-autosuggestions           # zsh plugin
 sudo pacman -S zsh-syntax-highlighting       # zsh plugin
 sudo pacman -S zsh-history-substring-search  # zsh plugin
 sudo pacman -S zsh-completions               # zsh plugin
+
+# =============== Bluetooth and audio =============== #
+sudo pacman -S pulseaudio
+sudo pacman -S pulseaudio-alsa
+sudo pacman -S pulseaudio-bluetooth
+sudo pacman -S bluez
+sudo pacman -S bluez-utils
+sudo pacman -S bluez-hid2hci
 
 # =============== Development =============== #
 sudo pacman -S mariadb
