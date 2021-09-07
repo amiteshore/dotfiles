@@ -35,6 +35,11 @@
   },
   "prettier.trailingComma": "none",
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "material-icon-theme.folders.associations": {
+    "actions": "redux-actions",
+    "reducers": "redux-reducer",
+    "types": "constant"
+  },
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": false
 }
