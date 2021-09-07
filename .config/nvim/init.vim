@@ -2,8 +2,10 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'itchyny/lightline.vim'
@@ -18,6 +20,7 @@ colorscheme night-owl
 
 " =============== General ===============
 set number
+set relativenumber
 set history=100
 set showcmd
 set laststatus=2
@@ -53,16 +56,19 @@ let g:coc_global_extensions = [
 \  'coc-snippets'
 \  ]
 
-" NERDTree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
+" Telescope
+nnoremap <silent> ;f <cmd>Telescope find_files<cr>
+nnoremap <silent> ;r <cmd>Telescope live_grep<cr>
 
-" Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+lua << EOF
+require('telescope').setup{
+  defaults = {
+    layout_config = {
+      preview_width = 0.6
+    }
+  }
+}
+EOF
 
 " Emmet
 let g:user_emmet_mode='i'
@@ -74,23 +80,17 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Lightline
 let g:lightline = { 'colorscheme': 'nightowl'}
 
-" CtrlP
-let g:ctrlp_map = '<leader>p'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = 'node_modules'
- 
 " =============== Custom mappings ===============
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>wq :wq<CR>
-nnoremap <leader>Q :q!<CR>
 
 nnoremap <leader>t :tabnew<Space>
 inoremap <leader>t <Esc>:tabnew<Space>
 
 augroup remember_folds
   autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
+  au BufWinLeave ?* mkview 1
+  au BufWinEnter ?* silent! loadview 1
 augroup END
