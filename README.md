@@ -25,14 +25,6 @@ Dotfiles, built for Arch Linux.
     <th>WM</th>
     <td>i3-gaps</td>
   </tr>
-  <tr>
-    <th>Monitor</th>
-    <td>htop</td>
-  </tr>
-  <tr>
-    <th>File Manager</th>
-    <td>ranger</td>
-  </tr>
 </table>
 
 ### Installation
