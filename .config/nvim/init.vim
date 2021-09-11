@@ -10,6 +10,7 @@ Plug 'mattn/emmet-vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -61,8 +62,15 @@ nnoremap <silent> ;f <cmd>Telescope find_files<cr>
 nnoremap <silent> ;r <cmd>Telescope live_grep<cr>
 
 lua << EOF
+local actions = require "telescope.actions"
+
 require('telescope').setup{
   defaults = {
+    mappings = {
+      i = {
+        ["<CR>"] = actions.select_tab
+      }
+    },
     layout_config = {
       preview_width = 0.6
     }
