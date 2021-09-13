@@ -11,6 +11,7 @@ Plug 'haishanh/night-owl.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'sheerun/vim-polyglot'
+Plug 'itchyny/vim-gitbranch'
 
 call plug#end()
 
@@ -86,7 +87,16 @@ imap ,, <C-y>,
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Lightline
-let g:lightline = { 'colorscheme': 'nightowl'}
+let g:lightline = {
+      \ 'colorscheme': 'nightowl',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
 
 " =============== Custom mappings ===============
 nnoremap <leader><space> :nohlsearch<CR>
