@@ -9,7 +9,6 @@ sudo pacman -S xorg-xinit
 sudo pacman -S firefox-developer-edition
 sudo pacman -S alacritty
 sudo pacman -S tmux
-sudo pacman -S neovim
 sudo pacman -S code
 sudo pacman -S python
 sudo pacman -S python-pip
@@ -67,6 +66,12 @@ sudo pacman -S noto-fonts-emoji
 # AUR PACKAGES #
 
 AUR_DIR="$HOME/Downloads/AUR"
+
+# =============== neovim nightly =============== #
+git clone https://aur.archlinux.org/neovim-nightly-bin.git "$AUR_DIR/neovim-nightly-bin"
+cd "$AUR_DIR/neovim-nightly-bin"
+makepkg -si
+echo
 
 # =============== google-chrome =============== #
 git clone https://aur.archlinux.org/google-chrome.git "$AUR_DIR/google-chrome"
