@@ -8,3 +8,5 @@ export EDITOR=/usr/bin/nvim
 
 # Use bat as manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+export TERM=xterm-256color
