@@ -5,11 +5,8 @@ mkdir -vp $HOME/Downloads/AUR
 mkdir -vp $HOME/Documents
 mkdir -vp $HOME/Pictures
 mkdir -vp $HOME/Temporary
-
 mkdir -vp $HOME/projects/dev
 mkdir -vp $HOME/projects/temp
-
-mkdir -vp $HOME/.zsh
 mkdir -vp "$HOME/.config/Code - OSS"
 
 # Copy files and directories
@@ -37,6 +34,3 @@ cp  -vr   "$HOME/dotfiles/.config/Code - OSS/User"      "$HOME/.config/Code - OS
 
 cp  -vr   $HOME/dotfiles/bin                    $HOME/
 cp  -vr   $HOME/dotfiles/.wallpapers            $HOME/Pictures/
-
-# Clone pure prompt
-git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
