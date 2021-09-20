@@ -8,19 +8,17 @@ sudo pacman -S base-devel    # group
 sudo pacman -S xorg-xinit
 sudo pacman -S firefox-developer-edition
 sudo pacman -S alacritty
-sudo pacman -S tmux
-sudo pacman -S code
-sudo pacman -S python
-sudo pacman -S python-pip
-sudo pacman -S python-pynvim
-sudo pacman -S wget
-sudo pacman -S curl
-sudo pacman -S fzf
-sudo pacman -S ufw
-sudo pacman -S tree
+sudo pacman -S starship
+sudo pacman -S ripgrep
+sudo pacman -S fd
 sudo pacman -S bat
 sudo pacman -S exa
-sudo pacman -S ranger
+sudo pacman -S fzf
+sudo pacman -S tmux
+sudo pacman -S wget
+sudo pacman -S curl
+sudo pacman -S ufw
+sudo pacman -S tree
 sudo pacman -S rsync
 sudo pacman -S openssh
 sudo pacman -S htop
@@ -35,6 +33,7 @@ sudo pacman -S zsh-autosuggestions           # zsh plugin
 sudo pacman -S zsh-syntax-highlighting       # zsh plugin
 sudo pacman -S zsh-history-substring-search  # zsh plugin
 sudo pacman -S zsh-completions               # zsh plugin
+sudo pacman -S python-pynvim
 
 # =============== Bluetooth and audio =============== #
 sudo pacman -S pulseaudio
@@ -50,6 +49,9 @@ sudo pacman -S redis
 sudo pacman -S docker
 sudo pacman -S httpie
 sudo pacman -S nginx
+sudo pacman -S python
+sudo pacman -S python-pip
+sudo pacman -S code
 
 # =============== Ricing =============== #
 sudo pacman -S i3-gaps
