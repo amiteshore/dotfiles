@@ -1,4 +1,4 @@
-" =============== vim-plug ===============
+" =============== Plugins ===============
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -24,11 +24,12 @@ colorscheme night-owl
 set number
 set relativenumber
 set history=100
-set showcmd
 set laststatus=2
 set noshowmode
 set scrolloff=8
 set clipboard^=unnamed,unnamedplus
+set splitright
+set splitbelow
 
 " =============== Indentation ===============
 set expandtab
@@ -36,27 +37,24 @@ set smarttab
 set shiftwidth=2
 set tabstop=2
 
-" =============== Indentation ===============
+" =============== Search ===============
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
 
-" Set , as mapleader
-let mapleader = ","
+" Custom map leader
+let mapleader = ','
+
+" =============== Custom mappings ===============
+nnoremap <leader><space> :nohlsearch<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>w :w<cr>
+nnoremap <leader>wq :wq<cr>
+nnoremap <leader><cr> :source %<cr>
+nnoremap <leader>t :tabnew<space>
 
 " =============== Plugin configurations ===============
-
-" Coc extensions
-let g:coc_global_extensions = [
-\  'coc-tsserver', 
-\  'coc-eslint', 
-\  'coc-prettier', 
-\  'coc-json', 
-\  'coc-css',
-\  'coc-pairs', 
-\  'coc-snippets'
-\  ]
 
 " Telescope
 nnoremap <silent> ;f <cmd>Telescope find_files<cr>
@@ -79,6 +77,16 @@ require('telescope').setup{
 }
 EOF
 
+" Coc extensions
+let g:coc_global_extensions = [
+\  'coc-tsserver', 
+\  'coc-eslint', 
+\  'coc-prettier', 
+\  'coc-json', 
+\  'coc-css',
+\  'coc-pairs'
+\  ]
+
 " Emmet
 let g:user_emmet_mode='i'
 imap ,, <C-y>,
@@ -98,15 +106,7 @@ let g:lightline = {
       \ },
       \ }
 
-" =============== Custom mappings ===============
-nnoremap <leader><space> :nohlsearch<CR>
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>wq :wq<CR>
-
-nnoremap <leader>t :tabnew<Space>
-inoremap <leader>t <Esc>:tabnew<Space>
-
+" =============== Misc ===============
 augroup remember_folds
   autocmd!
   au BufWinLeave ?* mkview 1

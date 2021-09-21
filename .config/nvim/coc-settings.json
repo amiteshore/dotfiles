@@ -7,6 +7,5 @@
     "json",
     "markdown"
   ],
-  "prettier.trailingComma": "none",
-  "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
+  "prettier.trailingComma": "none"
 }
