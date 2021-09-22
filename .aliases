@@ -26,6 +26,7 @@ alias vimrc='vim ~/.config/nvim/init.vim'
 alias tmuxconf="vim ~/.tmux.conf"
 alias i3conf='vim ~/.config/i3/config'
 alias alaconf='vim ~/.config/alacritty/alacritty.yml'
+alias st='vim ~/.config/starship.toml'
 
 # git
 alias ga='git add'

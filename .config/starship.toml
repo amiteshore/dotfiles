@@ -1,0 +1,13 @@
+format = "$all"
+
+[directory]
+truncation_length = 1
+
+[git_branch]
+format = "[$branch]($style) "
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true

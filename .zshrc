@@ -10,14 +10,6 @@ zstyle ':completion:*' rehash true
 # Include hidden files
 _comp_options+=(globdots)
 
-# =============== Prompt =============== #
-fpath+=$HOME/.zsh/pure
-autoload -Uz promptinit; promptinit
-zstyle :prompt:pure:path color '#969696'
-zstyle ':prompt:pure:prompt:success' color cyan
-zstyle ':prompt:pure:prompt:error' color red
-prompt pure
-
 # =============== History config =============== #
 HISTFILE=~/.histfile        # Where to save history to disk
 HISTSIZE=1000               # How many lines of history to keep in memory
@@ -52,3 +44,6 @@ bindkey -v
 
 # Load aliases
 [[ -f ~/.aliases ]] && . ~/.aliases
+
+# =============== Starship prompt =============== #
+eval "$(starship init zsh)"

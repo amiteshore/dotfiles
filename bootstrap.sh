@@ -23,6 +23,7 @@ cp  -v    $HOME/dotfiles/.zprofile              $HOME/
 cp  -v    $HOME/dotfiles/.zshenv                $HOME/
 cp  -v    $HOME/dotfiles/.zshrc                 $HOME/
 
+cp  -vr   $HOME/dotfiles/.config/starship.toml  $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/gtk-3.0        $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/nvim           $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/alacritty      $HOME/.config/
