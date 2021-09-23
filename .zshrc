@@ -19,6 +19,16 @@ setopt sharehistory         # Share history across terminals
 setopt incappendhistory     # Immediately append to the history file, not just when a term is killed
 
 # =============== Plugins =============== #
+# fzf
+export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_DEFAULT_OPTS="--no-height --border"
+
+export FZF_CTRL_T_COMMAND="fd --type f --hidden"
+export FZF_ALT_T_COMMAND="fd --type d ."
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10' # Change foreground color
