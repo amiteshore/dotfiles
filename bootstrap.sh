@@ -7,6 +7,7 @@ mkdir -vp $HOME/Pictures
 mkdir -vp $HOME/Temporary
 mkdir -vp $HOME/projects/dev
 mkdir -vp $HOME/projects/temp
+mkdir -vp $HOME/.config
 mkdir -vp "$HOME/.config/Code - OSS"
 
 # Copy files and directories
@@ -29,7 +30,6 @@ cp  -vr   $HOME/dotfiles/.config/nvim           $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/alacritty      $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/i3             $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/i3status       $HOME/.config/
-cp  -vr   $HOME/dotfiles/.config/neofetch       $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/rofi           $HOME/.config/
 cp  -vr   "$HOME/dotfiles/.config/Code - OSS/User"      "$HOME/.config/Code - OSS/"
 
