@@ -12,6 +12,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/vim-gitbranch'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 
@@ -42,6 +43,9 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+
+" Format on save
+autocmd FileType c,cpp ClangFormatAutoEnable
 
 " Custom map leader
 let mapleader = ','
