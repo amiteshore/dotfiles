@@ -3,8 +3,9 @@
 # Install packages from the official arch repo, AUR and other sources
 
 # =============== Utils =============== #
-sudo pacman -S xorg          # group
-sudo pacman -S base-devel    # group
+sudo pacman -S xorg           # group
+sudo pacman -S base-devel     # group
+sudo pacman -S i3             # group
 sudo pacman -S xorg-xinit
 sudo pacman -S firefox-developer-edition
 sudo pacman -S alacritty
@@ -33,6 +34,7 @@ sudo pacman -S zsh-autosuggestions           # zsh plugin
 sudo pacman -S zsh-syntax-highlighting       # zsh plugin
 sudo pacman -S zsh-history-substring-search  # zsh plugin
 sudo pacman -S zsh-completions               # zsh plugin
+sudo pacman -S gnome-themes-extra
 sudo pacman -S python-pynvim
 
 # =============== Bluetooth and audio =============== #
@@ -49,15 +51,10 @@ sudo pacman -S redis
 sudo pacman -S docker
 sudo pacman -S httpie
 sudo pacman -S nginx
+sudo pacman -S clang
 sudo pacman -S python
 sudo pacman -S python-pip
 sudo pacman -S code
-
-# =============== Ricing =============== #
-sudo pacman -S i3-gaps
-sudo pacman -S i3status
-sudo pacman -S i3lock
-sudo pacman -S gnome-themes-extra
 
 # =============== Fonts =============== #
 sudo pacman -S ttf-fira-code
@@ -101,11 +98,3 @@ npm install -g redis-commander nodemon
 # =============== vim-plug =============== #
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
-# =============== code extensions =============== #
-code --install-extension sdras.night-owl
-code --install-extension PKief.material-icon-theme
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension esbenp.prettier-vscode
-code --install-extension vscodevim.vim
-code --install-extension humao.rest-client
