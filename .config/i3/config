@@ -146,10 +146,14 @@ bar {
 # set background wallpaper
 exec --no-startup-id feh --bg-fill --randomize ~/Pictures/.wallpapers/*
 
+# open applications on specific workspaces
+for_window [class="Spotify"] move container to workspace $ws10
+assign [class="Google-chrome"] $ws1
+
 # disable window titlebars
 for_window [class=".*"] border pixel 0
 
-# Only enable gaps on a workspace when there is at least one container
+# only enable gaps on a workspace when there is at least one container
 smart_gaps on
 smart_borders on
 
