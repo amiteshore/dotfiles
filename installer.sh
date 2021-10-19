@@ -93,7 +93,7 @@ source ~/.zshrc
 nvm install node
 
 # =============== npm global pagkages =============== #
-npm install -g typescript ts-node sass redis-commander nodemon live-server
+npm install -g typescript ts-node sass ngrok redis-commander nodemon live-server
 
 # =============== vim-plug =============== #
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
