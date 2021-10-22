@@ -52,7 +52,6 @@ alias vim='nvim'
 alias cat='bat'
 alias h='history'
 alias code='code .'
-alias rg='ranger'
 alias neo='neofetch'
 alias sz="source ~/.zshrc"
 
