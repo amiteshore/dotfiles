@@ -1,7 +1,0 @@
-#!/usr/bin/zsh
-
-tmux new-session -d
-tmux split-window -h 
-tmux select-pane -t 0
-tmux -2 attach-session -d
-
