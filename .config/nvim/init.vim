@@ -63,6 +63,7 @@ nnoremap <leader>t :tabnew<space>
 " Telescope
 nnoremap <silent> ;f <cmd>Telescope find_files<cr>
 nnoremap <silent> ;r <cmd>Telescope live_grep<cr>
+nnoremap <silent> ;b <cmd>Telescope buffers<cr>
 
 lua << EOF
 local actions = require "telescope.actions"
