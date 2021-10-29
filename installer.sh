@@ -8,6 +8,7 @@ sudo pacman -S base-devel     # group
 sudo pacman -S i3             # group
 sudo pacman -S xorg-xinit
 sudo pacman -S firefox-developer-edition
+sudo pacman -S discord
 sudo pacman -S alacritty
 sudo pacman -S starship
 sudo pacman -S ripgrep
