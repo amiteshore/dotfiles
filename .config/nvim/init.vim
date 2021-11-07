@@ -13,6 +13,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/vim-gitbranch'
 Plug 'rhysd/vim-clang-format'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
