@@ -9,5 +9,11 @@ format = "[$branch]($style) "
 [nodejs]
 disabled = true
 
+[python]
+disabled = true
+
+[rust]
+disabled = true
+
 [package]
 disabled = true
