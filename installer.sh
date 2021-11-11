@@ -89,7 +89,7 @@ echo
 # =============== nvm & node =============== #
 echo "\n" >> "$HOME/.zshrc"
 echo -n "# Load nvm script" >> "$HOME/.zshrc"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.zshrc
 nvm install node
 
