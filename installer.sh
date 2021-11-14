@@ -55,7 +55,7 @@ sudo pacman -S nginx
 sudo pacman -S clang
 sudo pacman -S python
 sudo pacman -S python-pip
-sudo pacman -S code
+#sudo pacman -S code
 
 # =============== Fonts =============== #
 sudo pacman -S ttf-fira-code
@@ -99,3 +99,9 @@ npm install -g typescript ts-node sass ngrok redis-commander nodemon live-server
 # =============== vim-plug =============== #
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# vscode extensions
+#code --install-extension PKief.material-icon-theme
+#code --install-extension sdras.night-owl
+#code --install-extension vscodevim.vim
+#code --install-extension esbenp.prettier-vscode
