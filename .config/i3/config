@@ -17,8 +17,8 @@ floating_modifier $mod
 bindsym $mod+Shift+Return   exec --no-startup-id rofi -show run
 bindsym $mod+Return         exec alacritty
 bindsym $mod+F1             exec google-chrome-stable
-bindsym $mod+F2             exec firefox-developer-edition
-bindsym $mod+F3             exec spotify
+bindsym $mod+F2             exec spotify
+bindsym $mod+F3             exec firefox-developer-edition
 bindsym $mod+Shift+c        kill
 
 # change focus
@@ -69,8 +69,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# put workspace 10 on laptop screen
-workspace 10 output eDP-1
+# put workspace 9 on laptop screen
+workspace 9 output eDP-1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -147,8 +147,8 @@ bar {
 exec --no-startup-id feh --bg-fill --randomize ~/Pictures/.wallpapers/*
 
 # open applications on specific workspaces
-for_window [class="Spotify"] move container to workspace $ws10
 assign [class="Google-chrome"] $ws1
+for_window [class="Spotify"] move container to workspace $ws9
 
 # disable window titlebars
 for_window [class=".*"] border pixel 0
