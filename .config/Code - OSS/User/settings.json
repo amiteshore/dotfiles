@@ -10,6 +10,7 @@
   "editor.fontFamily": "'Fira Code', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid'",
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
+  "editor.lineNumbers": "relative",
   "keyboard.dispatch": "keyCode",
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "none",
