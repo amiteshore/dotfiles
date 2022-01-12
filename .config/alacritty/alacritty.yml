@@ -5,8 +5,8 @@ env:
 window:
   dynamic_padding: false
   padding:
-     x: 0
-     y: 0
+    x: 0
+    y: 0
 
 # Font configuration
 font:
@@ -22,31 +22,35 @@ mouse:
   hints:
     launcher: chromium
 
-# Solarized dark
+# Colors (Solarized Dark - Patched)
 colors:
   primary:
-    background: '0x002b36'
-    foreground: '0x839496'
-
+    background: "#001e27"
+    foreground: "#708284"
   normal:
-    black:   '0x073642'
-    red:     '0xdc322f'
-    green:   '0x859900'
-    yellow:  '0xb58900'
-    blue:    '0x268bd2'
-    magenta: '0xd33682'
-    cyan:    '0x2aa198'
-    white:   '0xeee8d5'
-
+    black: "#002831"
+    blue: "#2176c7"
+    cyan: "#259286"
+    green: "#738a05"
+    magenta: "#c61c6f"
+    red: "#d11c24"
+    white: "#eae3cb"
+    yellow: "#a57706"
   bright:
-    black:   '0x002b36'
-    red:     '0xcb4b16'
-    green:   '0x586e75'
-    yellow:  '0x657b83'
-    blue:    '0x839496'
-    magenta: '0x6c71c4'
-    cyan:    '0x93a1a1'
-    white:   '0xfdf6e3'
+    black: "#475b62"
+    blue: "#708284"
+    cyan: "#819090"
+    green: "#475b62"
+    magenta: "#5956ba"
+    red: "#bd3613"
+    white: "#fcf4dc"
+    yellow: "#536870"
+  cursor:
+    cursor: "#708284"
+    text: "#002831"
+  selection:
+    background: "#002831"
+    text: "#819090"
 
 # Reload alacritty when saving changes
 live_config_reload: true
