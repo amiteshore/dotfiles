@@ -9,11 +9,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/vim-gitbranch'
 Plug 'rhysd/vim-clang-format'
 Plug 'tpope/vim-surround'
+Plug 'preservim/nerdcommenter'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
