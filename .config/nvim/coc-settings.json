@@ -4,8 +4,9 @@
     "html",
     "css",
     "javascript",
+    "typescript",
     "json",
-    "markdown"
-  ],
-  "prettier.trailingComma": "none"
+    "markdown",
+    "yaml"
+  ]
 }
