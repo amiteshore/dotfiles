@@ -96,7 +96,16 @@ source ~/.zshrc
 nvm install --lts
 
 # =============== npm global pagkages =============== #
-npm install -g typescript ts-node sass ngrok redis-commander nodemon live-server npm-check-updates
+npm_packages=(
+  'typescript'
+  'ts-node'
+  'ngrok'
+  'redis-commander'
+  'live-server'
+  'npm-check-updates'
+)
+
+npm install -g ${npm_packages[@]}
 
 # =============== vim-plug =============== #
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
