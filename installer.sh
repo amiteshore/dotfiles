@@ -24,8 +24,14 @@ packages=(
   'htop'
   'neofetch'
   'rsync'
+  'zip'
+  'unzip'
+  'scrot'
+  'imagemagick'
+  'reflector'
   'openssh'
   'aria2'
+  'ranger'
   'thunar'
   'rofi'
   # zsh plugins
@@ -54,7 +60,7 @@ packages=(
   'ttf-font-awesome'
   'noto-fonts'
   'noto-fonts-emoji'
-  # helpers
+  # misc
   'feh'
   'xorg-xinit'
   'xsel'

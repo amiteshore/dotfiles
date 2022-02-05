@@ -3,7 +3,7 @@
 # Create directories, if doesn't exists.
 mkdir -vp $HOME/Downloads/AUR
 mkdir -vp $HOME/Documents
-mkdir -vp $HOME/Pictures
+mkdir -vp $HOME/Pictures/screenshots
 mkdir -vp $HOME/Temporary
 mkdir -vp $HOME/projects/dev
 mkdir -vp $HOME/projects/temp
