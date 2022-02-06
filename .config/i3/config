@@ -1,24 +1,28 @@
-# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+# set mod key (Mod4=<Super>)
 set $mod Mod4
 
-# Font for window titles (although I've no windows)
+# font for window titles (although I've no windows)
 font pango:Noto Sans 8
 
-# Use pactl to adjust volume in PulseAudio.
+# use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
-# Use Mouse+$mod to drag floating windows
-floating_modifier $mod
+# take screenshot
+bindsym Print               exec scrot --focused $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+
+# program launcher
+bindsym $mod+Shift+Return   exec --no-startup-id rofi -show run
 
 # start applications
-bindsym $mod+Shift+Return   exec --no-startup-id rofi -show run
 bindsym $mod+Return         exec alacritty
 bindsym $mod+F1             exec google-chrome-stable
 bindsym $mod+F2             exec spotify
 bindsym $mod+F3             exec firefox-developer-edition
+
+# close window
 bindsym $mod+Shift+c        kill
 
 # change focus
@@ -34,28 +38,17 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split orientation
-bindsym $mod+z split h
-bindsym $mod+v split v 
+bindsym $mod+Ctrl+h split h
+bindsym $mod+Ctrl+v split v 
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Ctrl+f fullscreen toggle
 
-# change container layout
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed  
-bindsym $mod+e layout toggle split
+# reload the configuration file
+bindsym $mod+Ctrl+r reload
 
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-bindsym $mod+d focus child
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
 
 # we use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -68,9 +61,6 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-
-# put workspace 9 on laptop screen
-workspace 9 output eDP-1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -96,27 +86,28 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# reload the configuration file
-bindsym $mod+Ctrl+r reload
+# put workspace 10 on laptop screen
+workspace 10 output eDP-1
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+# open applications on specific workspaces
+assign [class="Google-chrome"] $ws1
+for_window [class="Spotify"] move container to workspace $ws9
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# toggle between last two workspaces with the same keystroke
+workspace_auto_back_and_forth yes
 
-# resize window (you can also use the mouse for that)
+# avoid automatically focused when hover over a window
+focus_follows_mouse no
+
+# resize window
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
+        # back to normal
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
@@ -127,8 +118,7 @@ mode "$mode_system" {
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
+    # back to normal
     bindsym Escape mode "default"
 }
 bindsym $mod+x mode "$mode_system"
@@ -144,11 +134,7 @@ bar {
 }
 
 # set background wallpaper
-exec --no-startup-id feh --bg-fill --randomize ~/Pictures/.wallpapers/*
-
-# open applications on specific workspaces
-assign [class="Google-chrome"] $ws1
-for_window [class="Spotify"] move container to workspace $ws9
+exec --no-startup-id feh --bg-fill --randomize $HOME/Pictures/.wallpapers/*
 
 # disable window titlebars
 for_window [class=".*"] border pixel 0
@@ -160,3 +146,5 @@ smart_borders on
 # set inner/outer gaps
 gaps inner 6
 gaps outer -3
+
+# vim: filetype=i3config
