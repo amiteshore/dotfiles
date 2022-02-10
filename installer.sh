@@ -34,6 +34,8 @@ packages=(
   'ranger'
   'thunar'
   'rofi'
+  'dunst'
+  'xclip'
   # zsh plugins
   'zsh-autosuggestions'
   'zsh-syntax-highlighting'
