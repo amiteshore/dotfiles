@@ -23,7 +23,7 @@ Dotfiles, built for Arch Linux.
   </tr>
   <tr>
     <th>WM</th>
-    <td>i3-gaps</td>
+    <td>i3</td>
   </tr>
 </table>
 
@@ -44,10 +44,23 @@ cd $HOME/dotfiles
 
 Note: The installer will ask for password and permissions (again and again) before installing anything.
 
-Note: Some changes may require a quick restart.
+Note: Some changes may require a quick reboot.
 
 ### Post-installation
 
-Run `:PlugInstall` on `~/.config/nvim/init.vim`.
+Install vim plugins.
 
-Add name and email inside `~/.gitignore`.
+Edit `~/.gitignore`.
+
+Generate SSH keys.
+
+#### Docker
+
+Add user to docker group
+
+```sh
+sudo groupadd docker
+sudo usermod -aG docker <username>
+```
+
+Start docker service and check if I can run `docker` commands without root user (may need to reboot).
