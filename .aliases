@@ -7,15 +7,15 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias -- -='cd -' # go back to the previous directory
 
-alias p='cd ~/projects'
 alias temp='cd ~/projects/temp'
 alias dev='cd ~/projects/dev'
-
+alias work='cd ~/work'
 alias dl='cd ~/Downloads && exa --all --long --sort=time --reverse'
+alias pix='cd ~/Pictures'
+alias conf='cd ~/.config'
 alias aur="cd ~/Downloads/AUR"
-alias pics='cd ~/Pictures'
 alias dot='cd ~/dotfiles'
-alias t='cd ~/Temporary'
+alias tt='cd ~/Temporary'
 
 # open config files 
 alias al='vim ~/.aliases'
@@ -41,13 +41,14 @@ alias gc='git commit'
 alias start="sudo systemctl start "
 alias stop="sudo systemctl stop "
 alias status="sudo systemctl status "
-alias running="sudo systemctl --state=running --type=service"
+alias running-services="sudo systemctl --state=running --type=service"
 
 # misc
 alias grep='grep --color=auto --line-number'
 alias ls='exa --all'
 alias l='exa --all --long'
 
+alias t='tmux'
 alias vim='nvim'
 alias cat='bat'
 alias h='history'
@@ -56,5 +57,9 @@ alias neo='neofetch'
 alias sz="source ~/.zshrc"
 
 alias path='echo -e ${PATH//:/\\n}' # print each PATH entry on a separate line
+alias mem='free -h'
+alias disk='df -h'
+alias dvorak='setxkbmap dvorak'
+alias qwerty='setxkbmap us'
 
 # temporary
