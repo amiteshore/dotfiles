@@ -12,6 +12,8 @@ alias dev='cd ~/projects/dev'
 alias work='cd ~/work'
 alias dl='cd ~/Downloads && exa --all --long --sort=time --reverse'
 alias pix='cd ~/Pictures'
+alias screenshots='cd ~/Pictures/Screenshots'
+alias wallpapers='cd ~/Pictures/Wallpapers'
 alias conf='cd ~/.config'
 alias aur="cd ~/Downloads/AUR"
 alias dot='cd ~/dotfiles'

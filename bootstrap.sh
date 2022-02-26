@@ -3,7 +3,8 @@
 # Create directories, if doesn't exists.
 mkdir -vp $HOME/Downloads/AUR
 mkdir -vp $HOME/Documents
-mkdir -vp $HOME/Pictures/screenshots
+mkdir -vp $HOME/Pictures/Screenshots
+mkdir -vp $HOME/Pictures/Wallpapers
 mkdir -vp $HOME/Temporary
 mkdir -vp $HOME/projects/dev
 mkdir -vp $HOME/projects/temp
@@ -32,4 +33,4 @@ cp  -vr   $HOME/dotfiles/.config/i3status       $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/rofi           $HOME/.config/
 
 cp  -vr   $HOME/dotfiles/bin                    $HOME/
-cp  -vr   $HOME/dotfiles/.wallpapers            $HOME/Pictures/
+cp  -vr   $HOME/dotfiles/.wallpapers/**         $HOME/Pictures/Wallpapers/
