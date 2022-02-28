@@ -10,3 +10,5 @@ export EDITOR=/usr/bin/nvim
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export TERM=xterm-256color
+
+export HEADPHONE_MAC_ADDRESS="MAC_address_of_my_bluetooth_headphone"

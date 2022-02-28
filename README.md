@@ -48,9 +48,11 @@ Note: Some changes may require a quick reboot.
 
 ### Post-installation
 
-Install vim plugins.
-
 Edit `~/.gitignore`.
+
+Pair and trust the bluetooth headphone MAC address with `bluetoothctl`, then add the MAC address on `$HEADPHONE_MAC_ADDRESS` variable in `~/.exports`.
+
+Install vim plugins.
 
 Generate SSH keys.
 
