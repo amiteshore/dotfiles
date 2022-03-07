@@ -1,7 +1,8 @@
 general {
   colors = true
   interval = 1
-  separator = "|"
+  output_format = "i3bar"
+  separator = ""
 }
 
 order += "volume master"
@@ -11,26 +12,26 @@ order += "battery all"
 order += "tztime local"
 
 volume master {
-  format = "VOL: %volume"
-  format_muted = "VOL: muted (%volume)"
+  format = "[VOL: %volume]"
+  format_muted = "[VOL: muted (%volume)]"
   device = "default"
 }
 
 ethernet _first_ {
-  format_up = "E: up"
-  format_down = "E: down"
+  format_up = "[E: UP]"
+  format_down = "[E: DOWN]"
 }
 
 wireless _first_ {
-  format_up = "W: %essid"
-  format_down = "W: down"
+  format_up = "[W: %essid]"
+  format_down = "[W: DOWN]"
 }
 
 battery all {
-  format = "%status %percentage"
+  format = "[%status %percentage]"
   integer_battery_capacity = true
 }
 
 tztime local {
-  format = "%a %I:%M %p "
+  format = "%a%l:%M%p "
 }

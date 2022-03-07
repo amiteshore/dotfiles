@@ -62,6 +62,9 @@ packages=(
   'ttf-font-awesome'
   'noto-fonts'
   'noto-fonts-emoji'
+  # security
+  'nmap'
+  'wireshark-qt'
   # misc
   'feh'
   'xorg-xinit'
@@ -110,6 +113,7 @@ npm_packages=(
   'ngrok'
   'redis-commander'
   'live-server'
+  'serve'
   'npm-check-updates'
 )
 

@@ -63,5 +63,6 @@ alias mem='free -h'
 alias disk='df -h'
 alias dvorak='setxkbmap dvorak'
 alias qwerty='setxkbmap us'
+alias pj='vim package.json'
 
 # temporary

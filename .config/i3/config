@@ -126,7 +126,7 @@ bindsym $mod+x mode "$mode_system"
 # status bar
 bar {
     status_command i3status
-    font pango:Noto Sans 11
+    font pango:Fira Code 11
     position top
     colors {
         background #141414
@@ -134,7 +134,7 @@ bar {
 }
 
 # set background wallpaper
-exec --no-startup-id feh --bg-fill --randomize $HOME/Pictures/Wallpapers/*
+exec --no-startup-id feh --bg-fill --no-fehbg --randomize ~/Pictures/Wallpapers/*
 
 # disable window titlebars
 for_window [class=".*"] border pixel 0

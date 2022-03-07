@@ -20,12 +20,6 @@ setopt incappendhistory     # Immediately append to the history file, not just w
 
 # =============== Plugins =============== #
 # fzf
-export FZF_DEFAULT_COMMAND="fd --type f"
-export FZF_DEFAULT_OPTS="--no-height --border"
-
-export FZF_CTRL_T_COMMAND="fd --type f --hidden"
-export FZF_ALT_T_COMMAND="fd --type d ."
-
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
