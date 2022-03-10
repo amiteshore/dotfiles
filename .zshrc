@@ -42,6 +42,9 @@ bindkey '^[[1;6D'   beginning-of-line     # ctrl+shift+←
 bindkey '^[[1;6C'   end-of-line           # ctrl+shift+→
 bindkey '^H'        backward-delete-word  # ctrl+backspace
 
+bindkey -s ^F "cdd\n"
+bindkey -s ^E "conf\n"
+
 # =============== Misc =============== #
 # Set `vi` mode
 bindkey -v

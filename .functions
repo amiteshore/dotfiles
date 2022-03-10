@@ -4,3 +4,41 @@
 function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
+
+# Quickly cd into directories 
+function cdd() {
+  local directories=(
+    "$HOME"
+    "$HOME/Downloads"
+    "$HOME/Pictures"
+    "$HOME/work"
+    "$HOME/projects"
+    "$HOME/projects/temp"
+    "$HOME/projects/dev"
+  )
+  local selected=$(fd . ${directories[@]} --exact-depth 1 --type d | fzf)
+  if [[ -z $selected ]]; then
+    return
+  else
+    cd $selected
+  fi
+}
+
+# Quickly open config files with nvim
+function conf() {
+  local files=(
+    "$HOME"
+    "$HOME/.config/alacritty"
+    "$HOME/.config/dunst"
+    "$HOME/.config/i3"
+    "$HOME/.config/i3status"
+    "$HOME/.config/nvim"
+    "$HOME/.config/ranger"
+  )
+  local selected=$(fd . ${files[@]} --exact-depth 1 --hidden --type f | fzf)
+  if [[ -z $selected ]]; then
+    return
+  else
+    nvim $selected
+  fi
+}
