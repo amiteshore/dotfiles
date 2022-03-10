@@ -67,6 +67,8 @@ packages=(
   'wireshark-qt'
   # misc
   'feh'
+  'ueberzug'
+  'jq'
   'xorg-xinit'
   'xsel'
   'numlockx'
