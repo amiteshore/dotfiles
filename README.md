@@ -27,34 +27,41 @@ Dotfiles, built for Arch Linux.
   </tr>
 </table>
 
+### Requirements
+
+- git
+- zsh
+
 ### Installation
 
-A base installation of Arch Linux is required for this setup to work.
+A base installation of Arch Linux with a non-root `sudo` enabled user account is required for this setup to work.
 
-`git` is required for cloning this repository.
+> Tip: Enable parallel downloading in `/etc/pacman.conf` for faster installation.
+
+> Remove packages from [installer.sh](https://github.com/amiteshore/dotfiles/blob/master/installer.sh) that I don't wanna install.
 
 Run this:
 
 ```sh
-git clone https://github.com/amiteshore/dotfiles.git "$HOME/dotfiles"
-cd $HOME/dotfiles
+git clone https://github.com/amiteshore/dotfiles.git "~/dotfiles"
+cd ~/dotfiles
 ./bootstrap.sh
 ./installer.sh
 ```
-
-Note: The installer will ask for password and permissions (again and again) before installing anything.
 
 Note: Some changes may require a quick reboot.
 
 ### Post-installation
 
-Edit `~/.gitignore`.
+Edit `~/.gitconfig`.
 
-Pair and trust the bluetooth headphone MAC address with `bluetoothctl`, then add the MAC address on `$HEADPHONE_MAC_ADDRESS` variable in `~/.exports`.
+Generate SSH keys.
 
 Install vim plugins.
 
-Generate SSH keys.
+Setup firewall.
+
+Pair and trust the bluetooth headphone MAC address with `bluetoothctl`, then add the MAC address on `$HEADPHONE_MAC_ADDRESS` variable in `~/.exports`.
 
 #### Docker
 
@@ -65,4 +72,4 @@ sudo groupadd docker
 sudo usermod -aG docker <username>
 ```
 
-Start docker service and check if I can run `docker` commands without root user (may need to reboot).
+Start `docker.service` and check if I can run `docker` commands without root user (may need to reboot).

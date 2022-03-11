@@ -6,6 +6,7 @@ packages=(
   'xorg'              # group
   'base-devel'        # group
   'i3'                # group
+  'firefox'
   'firefox-developer-edition'
   'discord'
   'alacritty'
@@ -66,6 +67,7 @@ packages=(
   'nmap'
   'wireshark-qt'
   # misc
+  'cmatrix'
   'feh'
   'ueberzug'
   'jq'
@@ -96,7 +98,7 @@ echo
 
 # =============== spotify =============== #
 git clone https://aur.archlinux.org/spotify.git "$AUR_DIR/spotify"
-curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | gpg --import -
 cd $AUR_DIR/spotify
 makepkg -si
 echo

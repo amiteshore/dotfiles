@@ -22,10 +22,10 @@ mouse:
   hints:
     launcher: chromium
 
-# Colors (Solarized Dark - Patched)
+# Colors (Night Owl Background AND Solarized Dark - Patched)
 colors:
   primary:
-    background: "#001e27"
+    background: "#011627"
     foreground: "#708284"
   normal:
     black: "#002831"

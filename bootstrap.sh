@@ -6,6 +6,7 @@ mkdir -vp $HOME/Documents
 mkdir -vp $HOME/Pictures/Screenshots
 mkdir -vp $HOME/Pictures/Wallpapers
 mkdir -vp $HOME/Temporary
+mkdir -vp $HOME/work
 mkdir -vp $HOME/projects/dev
 mkdir -vp $HOME/projects/temp
 mkdir -vp $HOME/.config
@@ -31,6 +32,7 @@ cp  -vr   $HOME/dotfiles/.config/alacritty      $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/i3             $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/i3status       $HOME/.config/
 cp  -vr   $HOME/dotfiles/.config/rofi           $HOME/.config/
+cp  -vr   $HOME/dotfiles/.config/dunst          $HOME/.config/
 
 cp  -vr   $HOME/dotfiles/bin                    $HOME/
 cp  -vr   $HOME/dotfiles/.wallpapers/**         $HOME/Pictures/Wallpapers/
