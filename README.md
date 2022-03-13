@@ -36,9 +36,9 @@ Dotfiles, built for Arch Linux.
 
 A base installation of Arch Linux with a non-root `sudo` enabled user account is required for this setup to work.
 
-> Tip: Enable parallel downloading in `/etc/pacman.conf` for faster installation.
+> Tip: Enable `ParallelDownloads` under `[Options]` in `/etc/pacman.conf` for faster downloading of packages.
 
-> Remove packages from [installer.sh](https://github.com/amiteshore/dotfiles/blob/master/installer.sh) that I don't wanna install.
+> Remove packages from [installer.sh](https://github.com/amiteshore/dotfiles/blob/master/installer.sh) that you don't need.
 
 Run this:
 
@@ -53,11 +53,11 @@ Note: Some changes may require a quick reboot.
 
 ### Post-installation
 
+Install vim plugins.
+
 Edit `~/.gitconfig`.
 
 Generate SSH keys.
-
-Install vim plugins.
 
 Setup firewall.
 
