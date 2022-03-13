@@ -52,7 +52,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
-  Plug 'jiangmiao/auto-pairs'
   Plug 'mattn/emmet-vim'
 
   Plug 'pangloss/vim-javascript'
@@ -147,9 +146,6 @@ let g:user_emmet_leader_key = '<Leader>' " ,,
 let g:user_emmet_install_global = 0
 autocmd FileType html,javascript EmmetInstall
 
-" Turn off auto-pairs toggle
-let g:AutoPairsShortcutToggle = '<Nop>'
-
 " Save folds
 augroup remember_folds
   autocmd!
@@ -158,7 +154,7 @@ augroup remember_folds
 augroup END
 
 " --------------- COC START ------------------"
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-css' ]
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-css', 'coc-pairs' ]
 
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
