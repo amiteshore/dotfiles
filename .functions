@@ -28,6 +28,7 @@ function cdd() {
 function conf() {
   local files=(
     "$HOME"
+    "$HOME/.config"
     "$HOME/.config/alacritty"
     "$HOME/.config/dunst"
     "$HOME/.config/i3"
