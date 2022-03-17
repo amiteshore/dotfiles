@@ -126,12 +126,6 @@ nnoremap <silent> ;h :Telescope highlights<CR>
 lua <<EOF
 require'telescope'.setup {
   defaults = {
-    mappings = {
-      i = {
-        -- Open selected file in a new tab instead of buffer
-        ["<CR>"] = require'telescope.actions'.select_tab
-      }
-    },
     layout_config = {
       -- Increase the width of the preview window
       preview_width = 0.6
