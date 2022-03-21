@@ -11,13 +11,17 @@ alias temp='cd ~/Temporary'
 alias dot='cd ~/dotfiles'
 
 # git
+alias gl='git log'
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
 alias gs='git status'
 alias gp='git push'
-alias gl='git pull'
 alias gc='git commit'
+alias gm='git merge'
+alias gco='git checkout'
+alias gcm='git checkout main'
+alias gcd='git checkout devel'
 
 # systemd
 alias start="sudo systemctl start "
