@@ -6,24 +6,24 @@ Dotfiles, built for Arch Linux.
 
 <table>
   <tr>
-    <th>Shell</th>
-    <td>zsh</td>
+    <th>WM</th>
+    <td>i3</td>
   </tr>
   <tr>
     <th>Terminal</th>
     <td>alacritty</td>
   </tr>
   <tr>
-    <th>Editor</th>
-    <td>neovim</td>
+    <th>Shell</th>
+    <td>zsh</td>
   </tr>
   <tr>
     <th>Multiplexer</th>
     <td>tmux</td>
   </tr>
   <tr>
-    <th>WM</th>
-    <td>i3</td>
+    <th>Editor</th>
+    <td>neovim</td>
   </tr>
 </table>
 
