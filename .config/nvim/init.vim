@@ -124,10 +124,24 @@ nnoremap <silent> ;k :Telescope keymaps<CR>
 nnoremap <silent> ;h :Telescope highlights<CR>
 
 lua <<EOF
-require'telescope'.setup {
+local actions = require "telescope.actions"
+
+require "telescope".setup {
   defaults = {
+    mappings = {
+      -- insert mode
+      i = { 
+        -- go to file selection as a split
+        ["<C-h>"] = actions.select_horizontal, 
+      },
+      -- normal mode
+      n = { 
+        -- go to file selection as a split
+        ["<C-h>"] = actions.select_horizontal,
+      }
+    },
     layout_config = {
-      -- Increase the width of the preview window
+      -- increase the width of the preview window
       preview_width = 0.6
     }
   }
