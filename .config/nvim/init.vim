@@ -90,6 +90,8 @@ nnoremap <Leader><Space> :nohlsearch<CR>
 nnoremap Y yy
 " Select all
 nnoremap <Leader>a ggVG
+" Join lines
+nnoremap H :join<CR>
 " Move line under cursor up or down
 nnoremap K :m-2<CR>
 nnoremap J :m+<CR>
@@ -99,14 +101,17 @@ vnoremap J :m '>+1<CR>gv=gv
 " Indent line(s) in visual mode
 vnoremap > >gv
 vnoremap < <gv
-" Resize splits
-nnoremap <Leader>+ :vertical resize +5<CR>
-nnoremap <Leader>- :vertical resize -5<CR>
 " Move between splits with <C-[hlkj]>
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-k> <C-w>k
 nnoremap <C-j> <C-w>j
+" Resize horizontal splits
+nnoremap <silent> ;+ :resize +5<CR>
+nnoremap <silent> ;- :resize -5<CR>
+" Resize vertical splits
+nnoremap <silent> <Leader>+ :vertical resize +5<CR>
+nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 " vim-plug mappings
 nnoremap <Leader>PC :PlugClean<CR>
