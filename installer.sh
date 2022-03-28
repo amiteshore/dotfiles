@@ -22,6 +22,7 @@ packages=(
   'curl'
   'ufw'
   'tree'
+  'glances'
   'htop'
   'neofetch'
   'rsync'
