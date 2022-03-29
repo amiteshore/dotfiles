@@ -44,6 +44,7 @@ bindkey '^H'        backward-delete-word  # ctrl+backspace
 
 bindkey -s ^F "cdd\n"
 bindkey -s ^E "conf\n"
+bindkey -s ^O "open_file\n"
 
 # =============== Misc =============== #
 # Set `vi` mode

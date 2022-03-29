@@ -43,3 +43,13 @@ function conf() {
     nvim $selected
   fi
 }
+
+# Open files with nvim from pwd
+function open_file() {
+  local selected=$(fd --type f | fzf)
+  if [[ -z $selected ]]; then
+    return
+  else
+    nvim $selected
+  fi
+}
