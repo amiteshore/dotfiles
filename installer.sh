@@ -130,3 +130,10 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # =============== tmux plugins =============== #
 git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
+
+# =============== mongosh =============== #
+wget -P $HOME/Downloads/ https://downloads.mongodb.com/compass/mongosh-1.3.1-linux-x64.tgz
+tar -C $HOME/Downloads -zxvf $HOME/Downloads/mongosh-1.3.1-linux-x64.tgz
+cd $HOME/Downloads/mongosh-1.3.1-linux-x64/bin
+sudo cp mongosh /usr/local/bin/
+sudo cp mongocryptd-mongosh /usr/local/bin/
