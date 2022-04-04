@@ -115,10 +115,12 @@ nvm install --lts
 npm_packages=(
   'typescript'
   'ts-node'
-  'ngrok'
   'redis-commander'
-  'live-server'
+  'ngrok'
   'serve'
+  'live-server'
+  'json-server'
+  'hotel'
   'npm-check-updates'
 )
 
