@@ -2,6 +2,6 @@
 	name = MY_NAME
 	email = MY_EMAIL
 [core]
-	editor = vim
+	editor = nvim
 [init]
   defaultBranch = main
