@@ -11,12 +11,16 @@ zstyle ':completion:*' rehash true
 _comp_options+=(globdots)
 
 # =============== History config =============== #
-HISTFILE=~/.histfile        # Where to save history to disk
-HISTSIZE=1000               # How many lines of history to keep in memory
-SAVEHIST=5000               # Number of history entries to save to disk
-setopt hist_ignore_dups     # Ignore duplicated commands history list
-setopt sharehistory         # Share history across terminals
-setopt incappendhistory     # Immediately append to the history file, not just when a term is killed
+HISTSIZE=10000000             # Number of lines of history kept within the shell
+HISTFILE=~/.histfile          # File where history is saved
+SAVEHIST=10000000             # Number of lines of history to save to $HISTFILE
+
+setopt share_history          # Share history across terminals
+setopt inc_append_history     # Immediately append to the history file, not just when a term is killed
+setopt hist_ignore_all_dups   # Delete old recorded entry if new entry is a duplicate
+setopt hist_ignore_dups       # Don't record an entry that was just recorded again
+setopt hist_ignore_space      # Don't record an entry starting with a space
+setopt hist_save_no_dups      # Don't write duplicate entries in the history file.
 
 # =============== Plugins =============== #
 # fzf
@@ -44,7 +48,7 @@ bindkey '^H'        backward-delete-word  # ctrl+backspace
 
 bindkey -s ^F "cdd\n"
 bindkey -s ^E "conf\n"
-bindkey -s ^O "open_file\n"
+bindkey -s ^\` "open_file\n"
 
 # =============== Misc =============== #
 # Set `vi` mode
