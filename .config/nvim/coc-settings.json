@@ -8,5 +8,6 @@
     "json",
     "markdown",
     "yaml"
-  ]
+  ],
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
 }

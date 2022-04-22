@@ -45,10 +45,12 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'nvim-telescope/telescope.nvim'
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'honza/vim-snippets'
 
   Plug 'haishanh/night-owl.vim'
   Plug 'itchyny/lightline.vim'
 
+  Plug 'itchyny/vim-gitbranch'
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
@@ -63,7 +65,16 @@ call plug#end()
 " Colorscheme + Statusline
 syntax enable
 colorscheme night-owl
-let g:lightline = { 'colorscheme': 'nightowl' }
+let g:lightline = {
+    \ 'colorscheme': 'nightowl',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'gitbranch#name'
+    \ },
+    \ }
 
 " Customize some colors
 hi jsImport guifg=#c792ea ctermfg=176 gui=NONE cterm=NONE
@@ -79,13 +90,10 @@ hi CocUnusedHighlight guifg=#8a8a8a ctermfg=245 gui=NONE cterm=NONE
 let mapleader = ','
 
 " Mappings
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>qa :qa<CR>
-nnoremap <Leader>wq :wq<CR>
-nnoremap <Leader>t :tabnew<Space>
 nnoremap <Leader><CR> :source ~/.config/nvim/init.vim<CR>
 nnoremap <Leader><Space> :nohlsearch<CR>
+" Alternate buffer
+nnoremap <BS> :b#<CR>
 " Yank line
 nnoremap Y yy
 " Select all
@@ -167,19 +175,7 @@ augroup remember_folds
 augroup END
 
 " --------------- COC START ------------------"
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-css', 'coc-pairs' ]
-
-" Use tab for trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-css', 'coc-pairs', 'coc-snippets' ]
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -200,33 +196,23 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-augroup coc_group
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocActionAsync('format')
+" Show documentation of symbol under cursor, also known as cursor hover
+nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
 
 " Add `:Prettier`  command to format current buffer
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+" Make <tab> used for trigger completion, completion confirm, snippet expand and jump like VSCode.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
-" Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
 "----------------- COC END ---------------------"
