@@ -1,0 +1,10 @@
+#!/usr/bin/zsh
+
+directory=$(basename $(pwd))
+
+if tmux has-session -t $directory 2> /dev/null; then
+  tmux attach -t $directory
+else
+  tmux new -s $directory
+fi
+
