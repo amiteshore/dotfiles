@@ -9,6 +9,7 @@ packages=(
   'firefox'
   'firefox-developer-edition'
   'discord'
+  'neovim'
   'alacritty'
   'kitty'
   'starship'
@@ -84,12 +85,6 @@ sudo pacman -S ${packages[@]}
 # AUR PACKAGES #
 
 AUR_DIR="$HOME/Downloads/AUR"
-
-# =============== neovim nightly =============== #
-git clone https://aur.archlinux.org/neovim-nightly-bin.git "$AUR_DIR/neovim-nightly-bin"
-cd "$AUR_DIR/neovim-nightly-bin"
-makepkg -si
-echo
 
 # =============== google-chrome =============== #
 git clone https://aur.archlinux.org/google-chrome.git "$AUR_DIR/google-chrome"
