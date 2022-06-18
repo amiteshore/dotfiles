@@ -111,11 +111,14 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-set $mode_system (l)ock, (e)xit, (r)eboot, (Shift+s)hutdown
+set $Locker i3lock --tiling --image ~/.config/i3/screenshot.png && sleep 1
+
+set $mode_system (l)ock, (e)xit, (r)eboot, (s)uspend, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock --tiling --image ~/.config/i3/screenshot.png && sleep 1, mode "default"
+    bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
     # back to normal
