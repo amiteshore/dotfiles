@@ -117,6 +117,8 @@ npm_packages=(
   'json-server'
   'hotel'
   'npm-check-updates'
+  'expo-cli'
+  'eas-cli'
 )
 
 npm install -g ${npm_packages[@]}
