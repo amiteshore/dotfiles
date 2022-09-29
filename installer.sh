@@ -60,6 +60,7 @@ packages=(
   'clang'
   'python'
   'python-pip'
+  'lua-language-server' # LSP server
   # fonts
   'ttf-fira-code'
   'ttf-font-awesome'
@@ -117,22 +118,18 @@ npm_packages=(
   'json-server'
   'hotel'
   'npm-check-updates'
-  'expo-cli'
-  'eas-cli'
+  'expo-cli' # React Native development
+  'eas-cli' # React Native development
+  'typescript-language-server' # LSP server
+  '@tailwindcss/language-server' # LSP server
+  '@fsouza/prettierd' # prettier, as a daemon, for ludicrous formatting speed.
 )
 
 npm install -g ${npm_packages[@]}
 
-# =============== vim-plug =============== #
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# =============== packer (neovim plugin manager) =============== #
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # =============== tmux plugins =============== #
 git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
-
-# =============== mongosh =============== #
-wget -P $HOME/Downloads/ https://downloads.mongodb.com/compass/mongosh-1.3.1-linux-x64.tgz
-tar -C $HOME/Downloads -zxvf $HOME/Downloads/mongosh-1.3.1-linux-x64.tgz
-cd $HOME/Downloads/mongosh-1.3.1-linux-x64/bin
-sudo cp mongosh /usr/local/bin/
-sudo cp mongocryptd-mongosh /usr/local/bin/
