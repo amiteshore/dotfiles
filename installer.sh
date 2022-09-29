@@ -133,3 +133,11 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 # =============== tmux plugins =============== #
 git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
+
+# =============== rust =============== #
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source ~/.cargo/env
+echo
+
+# =============== rust crates =============== #
+cargo install stylua
