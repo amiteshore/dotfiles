@@ -35,7 +35,7 @@ fi
 numlockx & 
 
 # Set keyboard layout
-setxkbmap -layout dvorak -option caps:swapescape &
+setxkbmap -layout us -variant dvorak -option caps:swapescape &
 
 # Start i3
 exec /usr/bin/i3
