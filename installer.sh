@@ -103,7 +103,7 @@ echo
 # =============== nvm & node =============== #
 echo "\n" >> "$HOME/.zshrc"
 echo -n "# Load nvm script" >> "$HOME/.zshrc"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | gpg --import -
 source ~/.zshrc
 nvm install --lts
 
