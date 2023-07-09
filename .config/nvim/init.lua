@@ -1,3 +1,6 @@
+require("user.plugins")
+require("user.treesitter")
+
 require("user.colorscheme")
 require("user.statusline")
 require("user.highlights")
@@ -5,12 +8,10 @@ require("user.commands")
 require("user.options")
 require("user.mappings")
 
-require("user.plugins")
 require("user.lspconfig")
 require("user.null_ls")
 require("user.completion")
 require("user.telescope")
-require("user.treesitter")
 
 require("colorizer").setup()
 require("gitsigns").setup()

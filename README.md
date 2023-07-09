@@ -53,7 +53,7 @@ Note: Some changes may require a quick reboot.
 
 ### Post-installation
 
-Install vim plugins.
+Install vim plugins. Run `:PackerInstall` inside nvim, ignore the errors after opening nvim for the first time.
 
 Edit `~/.gitconfig`.
 
