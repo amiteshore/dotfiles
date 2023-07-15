@@ -95,7 +95,7 @@ echo
 
 # =============== spotify =============== #
 git clone https://aur.archlinux.org/spotify.git "$AUR_DIR/spotify"
-curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | gpg --import -
+curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | gpg --import -
 cd $AUR_DIR/spotify
 makepkg -si
 echo
@@ -103,7 +103,7 @@ echo
 # =============== nvm & node =============== #
 echo "\n" >> "$HOME/.zshrc"
 echo -n "# Load nvm script" >> "$HOME/.zshrc"
-curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | gpg --import -
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.zshrc
 nvm install --lts
 
