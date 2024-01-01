@@ -28,12 +28,12 @@ nnoremap("<leader>+", "<cmd>vertical resize +2<cr>", { silent = true })
 nnoremap("<leader>-", "<cmd>vertical resize -2<cr>", { silent = true })
 
 -- move line up or down (how about <leader>j and <leader>k)
-nnoremap("[e", "<cmd>move-2<cr>", { silent = true }) -- up
-nnoremap("]e", "<cmd>move+<cr>", { silent = true }) -- down
+nnoremap("K", "<cmd>move-2<cr>", { silent = true }) -- up
+nnoremap("J", "<cmd>move+<cr>", { silent = true }) -- down
 
 -- move visually selected line(s) up or down (how about <leader>j and <leader>k)
-vnoremap("[e", ":move '<-2<cr>gv=gv", { silent = true }) -- up
-vnoremap("]e", ":move '>+1<cr>gv=gv", { silent = true }) -- down
+vnoremap("K", ":move '<-2<cr>gv=gv", { silent = true }) -- up
+vnoremap("J", ":move '>+1<cr>gv=gv", { silent = true }) -- down
 
 -- indent line(s) in visual mode
 vnoremap(">", ">gv")
