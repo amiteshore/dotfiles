@@ -16,7 +16,8 @@ packages=(
   'ripgrep'
   'fd'
   'bat'
-  'exa'
+  # 'exa'
+  'eza'
   'fzf'
   'tmux'
   'wget'
@@ -36,9 +37,13 @@ packages=(
   'aria2'
   'ranger'
   'thunar'
+  'gvfs'
+  'tumbler' # thumbnails for thunar
+  'ffmpegthumbnailer' # video thumbnailer for thunar
   'rofi'
   'dunst'
   'xclip'
+  'gthumb'
   # zsh plugins
   'zsh-autosuggestions'
   'zsh-syntax-highlighting'
@@ -79,6 +84,10 @@ packages=(
   'numlockx'
   'python-pynvim'
   'gnome-themes-extra'
+  # for connecting mobile devices via USB
+  'mtpfs'
+  'gvfs-mtp'
+  'gvfs-gphoto2'
 )
 
 sudo pacman -S ${packages[@]}
@@ -123,6 +132,7 @@ npm_packages=(
   'typescript-language-server' # LSP server
   '@tailwindcss/language-server' # LSP server
   '@fsouza/prettierd' # prettier, as a daemon, for ludicrous formatting speed.
+  'vscode-langservers-extracted' # vscode-langservers bin collection. >> (update lspconfig file) << 
 )
 
 npm install -g ${npm_packages[@]}
