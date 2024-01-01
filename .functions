@@ -11,10 +11,10 @@ function cdd() {
     "$HOME"
     "$HOME/Downloads"
     "$HOME/Pictures"
-    "$HOME/work"
-    "$HOME/projects"
-    "$HOME/projects/temp"
-    "$HOME/projects/dev"
+    "$HOME/Work"
+    "$HOME/Projects"
+    "$HOME/Projects/temp"
+    "$HOME/Projects/dev"
   )
   local selected=$(fd . ${directories[@]} --exact-depth 1 --type d | fzf)
   if [[ -z $selected ]]; then
@@ -34,6 +34,7 @@ function conf() {
     "$HOME/.config/i3"
     "$HOME/.config/i3status"
     "$HOME/.config/nvim"
+    "$HOME/.config/nvim/lua/user"
     "$HOME/.config/ranger"
   )
   local selected=$(fd . ${files[@]} --exact-depth 1 --hidden --type f | fzf)
@@ -46,7 +47,7 @@ function conf() {
 
 # Open files with nvim from pwd
 function open_file() {
-  local selected=$(fd --type f | fzf)
+  local selected=$(fd --hidden --type f --exclude node_modules | fzf)
   if [[ -z $selected ]]; then
     return
   else
