@@ -1,0 +1,53 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+meta+/",
+    "command": "workbench.action.toggleStatusbarVisibility"
+  },
+  {
+    "key": "ctrl+meta+-",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "ctrl+meta+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+meta+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+meta+s",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "key": "ctrl+meta+k",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+  {
+    "key": "ctrl+l m",
+    "command": "workbench.action.editor.changeLanguageMode"
+  },
+  {
+    "key": "ctrl+meta+z",
+    "command": "workbench.action.toggleZenMode"
+  },
+  // Switch tabs like browsers
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  // Toggle between terminal and editor focus
+  { "key": "ctrl+`", "command": "workbench.action.terminal.focus" },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  }
+]

@@ -10,11 +10,13 @@ function cdd() {
   local directories=(
     "$HOME"
     "$HOME/Downloads"
+    "$HOME/Documents"
     "$HOME/Pictures"
-    "$HOME/Work"
     "$HOME/Projects"
     "$HOME/Projects/temp"
     "$HOME/Projects/dev"
+    "$HOME/Temporary"
+
   )
   local selected=$(fd . ${directories[@]} --exact-depth 1 --type d | fzf)
   if [[ -z $selected ]]; then
@@ -34,7 +36,6 @@ function conf() {
     "$HOME/.config/i3"
     "$HOME/.config/i3status"
     "$HOME/.config/nvim"
-    "$HOME/.config/nvim/lua/user"
     "$HOME/.config/ranger"
   )
   local selected=$(fd . ${files[@]} --exact-depth 1 --hidden --type f | fzf)

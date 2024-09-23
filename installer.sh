@@ -10,6 +10,10 @@ packages=(
   'firefox-developer-edition'
   'discord'
   'neovim'
+  'code'
+  'obs-studio'
+  'filezilla'
+  'gimp'
   'alacritty'
   'kitty'
   'starship'
@@ -102,6 +106,12 @@ cd "$AUR_DIR/google-chrome"
 makepkg -si
 echo
 
+# =============== cursor =============== #
+git clone https://aur.archlinux.org/cursor-bin.git "$AUR_DIR/cursor-bin"
+cd "$AUR_DIR/cursor-bin"
+makepkg -si
+echo
+
 # =============== spotify =============== #
 git clone https://aur.archlinux.org/spotify.git "$AUR_DIR/spotify"
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | gpg --import -
@@ -112,7 +122,7 @@ echo
 # =============== nvm & node =============== #
 echo "\n" >> "$HOME/.zshrc"
 echo -n "# Load nvm script" >> "$HOME/.zshrc"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 source ~/.zshrc
 nvm install --lts
 
@@ -121,11 +131,9 @@ npm_packages=(
   'typescript'
   'ts-node'
   'redis-commander'
-  'ngrok'
   'serve'
   'live-server'
   'json-server'
-  'hotel'
   'npm-check-updates'
   'expo-cli' # React Native development
   'eas-cli' # React Native development

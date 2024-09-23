@@ -1,10 +1,7 @@
 {
-  "window.zoomLevel": 1.65,
+  "window.zoomLevel": 1.275,
   "window.menuBarVisibility": "toggle",
-  "breadcrumbs.enabled": false,
-  "explorer.openEditors.visible": 0,
   "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
   "editor.minimap.enabled": false,
   "editor.fontSize": 16,
   "editor.fontFamily": "'Fira Code', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid'",
@@ -16,7 +13,7 @@
   "workbench.startupEditor": "none",
   "workbench.panel.defaultLocation": "bottom",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Night Owl (No Italics)",
+  "workbench.colorTheme": "Night Owl",
   "workbench.colorCustomizations": {
     "[Night Owl (No Italics)]": {
       "activityBar.border": "#102a44",
@@ -29,18 +26,30 @@
       "statusBar.border": "#102a44"
     }
   },
+  "zenMode.hideLineNumbers": false,
+  "vim.useSystemClipboard": true,
+  "security.workspace.trust.enabled": false,
+  "extensions.ignoreRecommendations": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
   },
-  "prettier.trailingComma": "none",
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
   "material-icon-theme.folders.associations": {
-    "actions": "redux-actions",
-    "reducers": "redux-reducer",
-    "types": "constant"
-  },
-  "workbench.activityBar.visible": false,
-  "workbench.statusBar.visible": false
+    "user": "robot",
+    "users": "ui",
+    "exercises": "drizzle",
+    "experiments": "config",
+    "calendar": "changesets",
+    "signin": "secure",
+    "workouts": "bicep",
+    "feed": "meta",
+    "[id]": "scala"
+  }
 }

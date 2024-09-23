@@ -21,11 +21,12 @@ alias gc='git commit'
 alias gm='git merge'
 alias gco='git checkout'
 alias gcm='git checkout main'
-alias gcd='git checkout devel'
+alias gcd='git checkout devl'
 
 # systemd
 alias start="sudo systemctl start "
 alias stop="sudo systemctl stop "
+alias restart="sudo systemctl restart "
 alias status="sudo systemctl status "
 alias running-services="sudo systemctl --state=running --type=service"
 
@@ -45,5 +46,6 @@ alias disk='df -h'
 alias dvorak='setxkbmap -layout us -variant dvorak -option caps:swapescape'
 alias qwerty='setxkbmap us'
 alias pj='vim package.json'
+alias code="code ."
 
 # temporary

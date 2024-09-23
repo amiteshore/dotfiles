@@ -6,7 +6,6 @@ mkdir -vp $HOME/Documents
 mkdir -vp $HOME/Pictures/Screenshots
 mkdir -vp $HOME/Pictures/Wallpapers
 mkdir -vp $HOME/Temporary
-mkdir -vp $HOME/Work
 mkdir -vp $HOME/Projects/dev
 mkdir -vp $HOME/Projects/temp
 mkdir -vp $HOME/.config
