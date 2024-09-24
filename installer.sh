@@ -61,7 +61,6 @@ packages=(
   'bluez-utils'
   'bluez-hid2hci'
   # development
-  'mariadb'
   'redis'
   'docker'
   'httpie'
@@ -70,6 +69,13 @@ packages=(
   'python'
   'python-pip'
   'lua-language-server' # LSP server
+  # lamp stack + phpmyadmin
+  'apache'
+  'mariadb'
+  'php'
+  'php-apache'
+  'php-gd'
+  'phpmyadmin'
   # fonts
   'ttf-fira-code'
   'ttf-font-awesome'
