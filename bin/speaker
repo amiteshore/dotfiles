@@ -1,0 +1,7 @@
+#!/usr/bin/zsh
+
+bluetoothctl power on
+bluetoothctl connect $SPEAKER_MAC_ADDRESS # environment variable
+
+#ft=sh
+
