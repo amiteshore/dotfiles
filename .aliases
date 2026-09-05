@@ -1,0 +1,55 @@
+#!/bin/zsh
+
+# quickly change directories
+alias ~='cd ~'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias -- -='cd -' # go back to the previous directory
+
+alias temp='cd ~/Temporary'
+alias dot='cd ~/dotfiles'
+
+alias pd='pnpm dev'
+alias pst='pnpm start'
+
+# git
+alias gl='git log'
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gs='git status'
+alias gp='git push'
+alias gc='git commit'
+alias gm='git merge'
+alias gco='git checkout'
+alias gcm='git checkout main'
+alias gcd='git checkout devl'
+
+# systemd
+alias start="sudo systemctl start "
+alias stop="sudo systemctl stop "
+alias restart="sudo systemctl restart "
+alias status="sudo systemctl status "
+alias running-services="sudo systemctl --state=running --type=service"
+
+# misc
+alias grep='grep --color=auto --line-number'
+alias ls='eza --all'
+alias l='eza --all --long'
+
+alias cat='bat'
+alias h='history'
+alias sz="source ~/.zshrc"
+
+alias path='echo -e ${PATH//:/\\n}' # print each PATH entry on a separate line
+alias mem='free -h'
+alias disk='df -h'
+alias dvorak='setxkbmap -layout us -variant dvorak -option caps:swapescape'
+alias qwerty='setxkbmap us'
+alias pj='vim package.json'
+alias code="code ."
+
+# temporary
+alias z='lazyssh'
+alias rmx='rm -rf .expo android ios node_modules'

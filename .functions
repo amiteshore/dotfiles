@@ -1,0 +1,55 @@
+#!/bin/zsh
+
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$_";
+}
+
+# Quickly cd into directories 
+function cdd() {
+  local directories=(
+    "$HOME"
+    "$HOME/Downloads"
+    "$HOME/Documents"
+    "$HOME/Desktop"
+    "$HOME/apps"
+    "$HOME/projects"
+    "$HOME/work"
+    "$HOME/temp"
+  )
+
+  local selected=$(fd . ${directories[@]} --exact-depth 1 --type d | fzf)
+
+  if [[ -z $selected ]]; then
+    return
+  else
+    cd $selected
+  fi
+}
+
+# Quickly open config files with nvim
+function conf() {
+  local files=(
+    "$HOME"
+    "$HOME/.config"
+  )
+
+  local selected=$(fd . ${files[@]} --exact-depth 1 --hidden --type f | fzf)
+
+  if [[ -z $selected ]]; then
+    return
+  else
+    vim $selected
+  fi
+}
+
+# Open files with nvim from pwd
+function open_file() {
+  local selected=$(fd --hidden --type f --exclude node_modules | fzf)
+
+  if [[ -z $selected ]]; then
+    return
+  else
+    vim $selected
+  fi
+}
