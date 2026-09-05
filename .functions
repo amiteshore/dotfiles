@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
@@ -18,12 +16,12 @@ function cdd() {
     "$HOME/temp"
   )
 
-  local selected=$(fd . ${directories[@]} --exact-depth 1 --type d | fzf)
+  local selected=$(fd . "${directories[@]}" --exact-depth 1 --type d | fzf)
 
   if [[ -z $selected ]]; then
     return
   else
-    cd $selected
+    cd "$selected"
   fi
 }
 
@@ -34,13 +32,11 @@ function conf() {
     "$HOME/.config"
   )
 
-  local selected=$(fd . ${files[@]} --exact-depth 1 --hidden --type f | fzf)
+  local selected=$(fd . "${files[@]}" --exact-depth 1 --hidden --type f | fzf)
 
-  if [[ -z $selected ]]; then
-    return
-  else
-    vim $selected
-  fi
+  [[ -z "$selected" ]] && return
+
+  vim "$selected"
 }
 
 # Open files with nvim from pwd

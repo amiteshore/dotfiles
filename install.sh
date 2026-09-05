@@ -1,7 +1,6 @@
-```bash
 #!/bin/bash
 
-set -e
+set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
