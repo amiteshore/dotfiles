@@ -85,3 +85,9 @@ ln -sfn "$DOTFILES/bin" "$HOME/bin"
 mkdir -p "$HOME/.config"
 ln -sfn "$DOTFILES/.config/kitty" "$HOME/.config/kitty"
 ln -sf "$DOTFILES/.config/starship.toml" "$HOME/.config/starship.toml"
+
+mkdir -p "$HOME/Library/Application Support/Antigravity IDE/User"
+
+ln -sf \
+  "$DOTFILES/apps/antigravity/settings.json" \
+  "$HOME/Library/Application Support/Antigravity IDE/User/settings.json"
