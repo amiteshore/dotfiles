@@ -1,0 +1,44 @@
+#!/bin/bash
+
+set -euo pipefail
+
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+echo "🚀 Starting macOS setup..."
+
+
+if [[ -x "/opt/homebrew/bin/brew" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+
+# --------------------------------------------------
+# Symlink dotfiles
+# --------------------------------------------------
+
+echo "🔗 Linking dotfiles..."
+
+# Shell
+ln -sf "$DOTFILES/.zprofile" "$HOME/.zprofile"
+ln -sf "$DOTFILES/.zshrc" "$HOME/.zshrc"
+ln -sf "$DOTFILES/.aliases" "$HOME/.aliases"
+ln -sf "$DOTFILES/.functions" "$HOME/.functions"
+
+# Git / terminal
+ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
+ln -sf "$DOTFILES/.vimrc" "$HOME/.vimrc"
+
+# Scripts
+ln -sfn "$DOTFILES/bin" "$HOME/bin"
+
+# Config
+mkdir -p "$HOME/.config"
+ln -sfn "$DOTFILES/.config/kitty" "$HOME/.config/kitty"
+ln -sf "$DOTFILES/.config/starship.toml" "$HOME/.config/starship.toml"
+
+mkdir -p "$HOME/Library/Application Support/Antigravity IDE/User"
+
+ln -sf \
+  "$DOTFILES/apps/antigravity/settings.json" \
+  "$HOME/Library/Application Support/Antigravity IDE/User/settings.json"
