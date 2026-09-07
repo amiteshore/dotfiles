@@ -31,6 +31,7 @@ brew "zsh-autosuggestions"
 
 # GUI applications
 cask "kitty"
+cask "whatsapp"
 cask "google-chrome"
 cask "android-studio"
 cask "antigravity-ide"
