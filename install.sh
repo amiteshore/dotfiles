@@ -36,34 +36,14 @@ brew bundle --file="$DOTFILES/Brewfile"
 
 
 # --------------------------------------------------
-# NVM
+# fnm (Fast Node Manager)
 # --------------------------------------------------
 
-echo "🟢 Installing NVM..."
+echo "🟢 Setting up Node via fnm..."
 
-export NVM_DIR="$HOME/.nvm"
-
-if [[ ! -d "$NVM_DIR" ]]; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.7/install.sh | bash
-fi
-
-# Load NVM into current shell
-if [[ -s "$NVM_DIR/nvm.sh" ]]; then
-    source "$NVM_DIR/nvm.sh"
-fi
-
-nvm install --lts
-nvm alias default 'lts/*'
-
-
-# --------------------------------------------------
-# pnpm
-# --------------------------------------------------
-
-echo "📦 Setting up pnpm..."
-
-corepack enable
-corepack prepare pnpm@latest --activate
+eval "$(fnm env)"
+fnm install --lts
+fnm default lts-latest
 
 
 # --------------------------------------------------
@@ -96,6 +76,12 @@ mkdir -p "$HOME/Library/Application Support/Antigravity IDE/User"
 ln -sf \
   "$DOTFILES/apps/antigravity/settings.json" \
   "$HOME/Library/Application Support/Antigravity IDE/User/settings.json"
+
+mkdir -p "$HOME/.gemini/config"
+
+ln -sf \
+  "$DOTFILES/apps/antigravity/mcp_config.json" \
+  "$HOME/.gemini/config/mcp_config.json"
 
 # --------------------------------------------------
 # tmux plugins

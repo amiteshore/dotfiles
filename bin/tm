@@ -1,10 +1,9 @@
 #!/bin/zsh
 
-directory=$(basename $(pwd))
+directory="$(basename "$PWD" | tr '.' '_')"
 
-if tmux has-session -t $directory 2> /dev/null; then
-  tmux attach -t $directory
+if tmux has-session -t "$directory" 2> /dev/null; then
+  tmux attach -t "$directory"
 else
-  tmux new -s $directory
+  tmux new -s "$directory"
 fi
-

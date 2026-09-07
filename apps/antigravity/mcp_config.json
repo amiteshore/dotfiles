@@ -1,0 +1,20 @@
+{
+	"mcpServers": {
+		"studyswap": {
+			"command": "uvx",
+			"args": ["mcp-openapi-proxy"],
+			"env": {
+				"OPENAPI_SPEC_URL": "https://api.studyswap.online/openapi",
+				"SERVER_URL_OVERRIDE": "https://api.studyswap.online"
+			}
+		},
+		"goldenhour": {
+			"command": "uvx",
+			"args": ["mcp-openapi-proxy"],
+			"env": {
+				"OPENAPI_SPEC_URL": "https://api.thegoldenhour.in/openapi.json",
+				"SERVER_URL_OVERRIDE": "https://api.thegoldenhour.in/"
+			}
+		}
+	}
+}

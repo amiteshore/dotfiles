@@ -4,3 +4,16 @@
 
 [init]
     defaultBranch = main
+
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+
+[diff]
+    algorithm = histogram
