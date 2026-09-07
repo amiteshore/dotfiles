@@ -17,3 +17,6 @@
 
 [diff]
     algorithm = histogram
+
+[core]
+    pager = delta
