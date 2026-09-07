@@ -1,0 +1,1 @@
+- Include mcp_config.json 

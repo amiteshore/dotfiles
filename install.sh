@@ -18,6 +18,11 @@ fi
 
 if [[ -x "/opt/homebrew/bin/brew" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -x "/usr/local/bin/brew" ]]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+else
+    echo "❌ Homebrew installation failed."
+    exit 1
 fi
 
 
@@ -91,3 +96,20 @@ mkdir -p "$HOME/Library/Application Support/Antigravity IDE/User"
 ln -sf \
   "$DOTFILES/apps/antigravity/settings.json" \
   "$HOME/Library/Application Support/Antigravity IDE/User/settings.json"
+
+# --------------------------------------------------
+# tmux plugins
+# --------------------------------------------------
+
+echo "🔌 Installing tmux plugins..."
+
+mkdir -p "$HOME/.tmux/plugins"
+
+if [[ ! -d "$HOME/.tmux/plugins/tpm" ]]; then
+    git clone \
+        https://github.com/tmux-plugins/tpm \
+        "$HOME/.tmux/plugins/tpm"
+fi
+
+# Install plugins declared in .tmux.conf
+"$HOME/.tmux/plugins/tpm/bin/install_plugins"

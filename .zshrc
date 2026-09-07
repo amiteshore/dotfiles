@@ -38,7 +38,7 @@ bindkey '^[[B' history-substring-search-down
 
 bindkey -s '^F' "cdd\n"
 bindkey -s '^E' "conf\n"
-bindkey -s '^G' "open_file\n"
+bindkey -s '^O' "open_file\n"
 
 
 # =============== Aliases / Functions =============== #

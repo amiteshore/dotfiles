@@ -12,7 +12,8 @@ set laststatus=2
 set scrolloff=8
 set history=1000
 set updatetime=300
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
+set clipboard=unnamed,unnamedplus
 set shortmess+=c
 
 set expandtab
@@ -53,5 +54,11 @@ nnoremap -- :resize -2<CR>
 nnoremap <leader>+ :vertical resize +2<CR>
 nnoremap <leader>- :vertical resize -2<CR>
 
-" Normal mode = block, Insert mode = vertical bar
-set guicursor=n-v-c:block,i:ver25
+set termguicolors
+
+" Cursor shape
+let &t_SI = "\e[6 q" " Insert: vertical bar
+let &t_SR = "\e[4 q" " Replace: underline
+let &t_EI = "\e[2 q" " Normal: block
+
+colorscheme habamax

@@ -3,49 +3,76 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
-# Quickly cd into directories 
+# Quickly cd into directories
 function cdd() {
-  local directories=(
-    "$HOME"
-    "$HOME/Downloads"
-    "$HOME/Documents"
-    "$HOME/Desktop"
-    "$HOME/apps"
-    "$HOME/projects"
-    "$HOME/work"
-    "$HOME/temp"
+  local selected=$(
+    fd . "$HOME/work" \
+      --hidden \
+      --type d \
+      --exclude .git \
+      --exclude node_modules \
+      --exclude .expo \
+      --exclude .agents \
+      --exclude .claude \
+      --exclude build \
+      --exclude dist \
+      --exclude coverage \
+      --exclude Pods \
+      --exclude .gradle \
+      --exclude .next |
+    sed "s|^$HOME/work/||" |
+    fzf --height 40% --reverse
   )
 
-  local selected=$(fd . "${directories[@]}" --exact-depth 1 --type d | fzf)
+  [[ -z "$selected" ]] && return
 
-  if [[ -z $selected ]]; then
-    return
-  else
-    cd "$selected"
-  fi
+  cd "$HOME/work/$selected"
 }
 
-# Quickly open config files with nvim
+# Quickly open config files with vim
 function conf() {
-  local files=(
-    "$HOME"
-    "$HOME/.config"
-  )
+  local selected=$(
+    {
+      fd . "$HOME" \
+        --hidden \
+        --max-depth 1 \
+        --type f \
+        --type l \
+        --exclude .DS_Store
 
-  local selected=$(fd . "${files[@]}" --exact-depth 1 --hidden --type f | fzf)
+      fd . "$HOME/.config" \
+        --hidden \
+        --follow \
+        --type f \
+        --exclude .DS_Store
+    } |
+    fzf --height 40% --reverse
+  )
 
   [[ -z "$selected" ]] && return
 
   vim "$selected"
 }
 
-# Open files with nvim from pwd
+# Open files with vim from pwd
 function open_file() {
-  local selected=$(fd --hidden --type f --exclude node_modules | fzf)
+  local selected=$(
+    fd . \
+      --hidden \
+      --type f \
+      --exclude .git \
+      --exclude .DS_Store \
+      --exclude node_modules \
+      --exclude .expo \
+      --exclude build \
+      --exclude dist \
+      --exclude coverage \
+      --exclude Pods \
+      --exclude .gradle |
+    fzf --height 40% --reverse
+  )
 
-  if [[ -z $selected ]]; then
-    return
-  else
-    vim $selected
-  fi
+  [[ -z "$selected" ]] && return
+
+  vim "$selected"
 }
